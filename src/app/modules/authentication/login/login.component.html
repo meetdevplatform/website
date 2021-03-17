@@ -1,0 +1,103 @@
+<header-secondary></header-secondary>
+<section class="content-wrapper content-auth">
+    <div class="container">
+        <div class="border-primary py-3">
+            <h3 class="text-primary text-center">
+                Developer Login
+            </h3>
+        </div>
+
+        <div class="auth-box pt-3 pb-2">
+            <div class="row justify-content-center justify-content-lg-end">
+                <div class="col-lg-6 col-md-8 text-center text-lg-right">
+                   <div class="card-sm ml-lg-auto mx-auto">
+
+                    <div class="card mb-4">
+                        <div class="form-box">
+                        <form class="form" [formGroup]="form" (submit)="submit()">
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Username or email</label>
+                                <input formControlName="email" type="text" class="form-input" placeholder="Enter your username or email">
+
+                                <div
+                                class="validation"
+                                *ngIf="submitted && email!.invalid"
+                              >
+                                <p *ngIf="email!.errors!.required">
+                                  Please enter your email!
+                                </p>
+
+                                <p *ngIf="email!.errors!.email">
+                                  Please enter a valid email!
+                                </p>
+                              </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Password</label>
+                                <input formControlName="password" type="password" class="form-input" placeholder="Enter your password">
+
+                                <div
+                                class="validation"
+                                *ngIf="submitted && password!.invalid"
+                              >
+                                <p *ngIf="password!.errors!.required">
+                                  Please enter your password!
+                                </p>
+                              </div>
+
+                            </div>
+
+
+                            <div class="form-btn">
+                                <button class="btn btn-dark" type="submit">
+                                    Login
+                                </button>
+                            </div>
+                        </form>
+                        <div class="form-social-btns">
+                            <p class="text-center border-gray-100 pb-4">
+                                or login using
+                            </p>
+
+                            <div class="row no-gutters">
+                                <div class="col-sm-4">
+                                    <button class="btn btn-social w-100">
+                                        <img src="assets/img/icons/google.svg" alt="google login">
+                                        Google
+                                    </button>
+                                </div>
+                                <div class="col-sm-4 px-sm-3">
+                                    <button class="btn btn-social w-100">
+                                        <img src="assets/img/icons/github.svg" alt="github login">
+                                        Github
+                                    </button>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button class="btn btn-social w-100">
+                                        <img src="assets/img/icons/linkedin.svg" alt="linkedin login">
+                                        Linkedin
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a routerLink='/signup' class="card card-border card-link">
+                    <p class="text-gray text-center">
+                        New here?
+                        <a routerLink='/signup' class="link-primary">
+                        Make a new account
+                        </a>
+                    </p>
+                </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/img/vectors/login-vector.svg" alt="MeetDev Login" class="img-login">
+</section>
+<footer-secondary></footer-secondary>
+

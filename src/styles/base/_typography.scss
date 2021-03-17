@@ -1,0 +1,88 @@
+*{
+    @include base-fs;
+    font-family: Aeonik;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Met;
+    font-weight: 700;
+}
+
+label, input, textarea{
+    font-family: Met;
+    font-weight: 500;
+}
+button{
+    font-weight: 600;
+    @include medium-fs;
+    font-family: Met;
+}
+a{
+    font-family: Met;
+    font-weight: 400;
+    transition:$transition-primary;
+}
+p{
+    font-family: Aeonik;
+    font-weight: 500;
+}
+
+h1{
+    font-size: 4.6rem;
+    line-height: 1.2;
+}
+
+h2{
+    font-size: 3.4rem;
+    letter-spacing: -0.1rem;
+}
+h3{
+    font-size: 2.6rem;
+    letter-spacing: -0.07rem;
+    @include res(sm){
+        font-size: 2.8rem;
+    }
+}
+h4{
+    font-size: 2.2rem;
+    @include res(sm){
+        font-size: 2.4rem;
+    }
+}
+h5{
+    font-size: 2rem;
+    @include res(sm){
+        font-size: 2.2rem;
+    }
+}
+h6{
+    font-size: 1.8rem;
+    @include res(sm){
+        font-size: 2rem;
+    }
+}
+
+//links
+.link{
+    &-primary{
+        font-weight: 700;
+        color: $color-primary;
+        &:hover{
+            color: $color-secondary;
+        } 
+}
+&-gray{
+    color: $gray-text;
+    &:hover{
+        color: $color-primary;
+    }
+}
+}
+
+
+
+//text utils
+
+.text-gray{
+    color: $gray-text;
+}

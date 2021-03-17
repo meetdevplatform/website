@@ -1,0 +1,26 @@
+
+.bg-gray{
+    background-color: $gray-bg;
+}
+
+.text-primary{
+    color: $color-primary;
+}
+
+.text-secondary{
+    color: $color-secondary;
+}
+
+.border{
+    &-primary{
+        border-bottom: 1px solid $color-primary;
+    }
+    &-gray-100{
+        border-bottom: 0.8px solid $gray-100;
+    }
+}
+
+.required{
+    font-size: 2rem;
+    font-weight: 600;
+}

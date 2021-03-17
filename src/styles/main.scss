@@ -1,0 +1,82 @@
+//Metropolis font
+@font-face {
+    font-family: Met;
+    src: url(/assets/fonts/Metropolis/Metropolis-Medium.ttf);
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: Met;
+    src: url(/assets/fonts/Metropolis/Metropolis-SemiBold.ttf);
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: Met;
+    src: url(/assets/fonts/Metropolis/Metropolis-Bold.ttf);
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: Met;
+    src: url(/assets/fonts/Metropolis/Metropolis-ExtraBold.ttf);
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: Met;
+    src: url(/assets/fonts/Metropolis/Metropolis-Black.ttf);
+    font-weight: 900;
+  }
+//Aeonik font
+@font-face {
+    font-family: Aeonik;
+    src: url(/assets/fonts/Aeonik/Aeonik-Light.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Aeonik;
+    src: url(/assets/fonts/Aeonik/Aeonik-Regular.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Aeonik;
+    src: url(/assets/fonts/Aeonik/Aeonik-Medium.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Aeonik;
+    src: url(/assets/fonts/Aeonik/Aeonik-Bold.otf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Aeonik;
+    src: url(/assets/fonts/Aeonik/Aeonik-Black.otf);
+    font-weight: 800;
+}
+
+//----------bootstrap scss---------------//
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/utilities";
+
+//-----------website css------------------//
+
+///abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins-core";
+@import "abstracts/mixins";
+
+//basic
+@import "normalize.css";
+@import "base/animation";
+@import "base/reset";
+@import "base/typography";
+@import "base/utils";
+
+//components
+@import "components/buttons";
+@import "components/card";
+@import "components/img";
+@import "components/forms";
+//layout
+@import "layouts/navigation";
+@import "layouts/content";

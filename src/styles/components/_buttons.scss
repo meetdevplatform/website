@@ -1,0 +1,74 @@
+.btn{
+    border-radius: 0.4rem;
+    padding: 1.5rem 4rem;
+    text-align: center;
+    transition: $transition-secondary;
+
+    @include res(sm){
+        padding: 1.8rem 4rem;
+    }
+    &-primary{
+
+    }
+    &-secondary{
+
+    }
+    &-tertiary{
+
+    }
+    &-dark{
+        background-color: $dark;
+        color: $white;
+        @include btn-shadow($dark, 0.25);
+
+        &:hover{
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+        &:focus{
+            box-shadow: 0 0 0 3px $gray-text;
+        }
+        &:active{
+           box-shadow: none;
+            transform: translateY(0);
+            background-color: darken($dark, 0.1);
+        }
+    }
+    &-social{
+        background-color: $white;
+        padding: 1.4rem 2.4rem;
+
+        @include res(sm){
+            pad: 2rem 3rem;
+        }
+        box-shadow: $shadow;
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        @include base-fs;
+        justify-content: center;
+        font-weight: 800;
+        img{
+            height: 1.6rem;
+            margin-right: 0.8rem;
+            transform: translateY(-8%);
+
+            @include res(sm){
+                height: 2rem;
+            }
+        }
+
+        &:hover{
+            background-color:$gray-100;
+            transform: translateY(-2px);
+        }
+        &:focus{
+            box-shadow: 0 0 0 2px $gray-300;
+        }
+        &:active{
+            transform: translateY(0);
+            box-shadow: $shadow-active;
+             background-color: $gray-300;
+         }
+    }
+}

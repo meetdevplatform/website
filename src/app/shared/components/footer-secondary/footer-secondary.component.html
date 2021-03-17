@@ -1,0 +1,43 @@
+<footer class="footer">
+    <nav role="navigation">
+        <ul class="d-flex footer-primary-links">
+            <li>
+                <a routerLink="/explore" class="link-primary">
+                    explore projects
+                </a>
+            </li>
+            <li>
+                <a routerLink="/about" class="link-primary">
+                    about us
+                </a>
+            </li>
+        </ul>
+    </nav>
+   
+    <nav role="navigation" class="position-relative">
+        <ul class="footer-secondary-links navigation-mobile" id="footer-mobile-menu">
+            <li>
+                <a routerLink="/contact" class="link-gray">
+                    contact
+                </a>
+            </li>
+            <li>
+                <a routerLink="/faq" class="link-gray">
+                    faqs
+                </a>
+            </li>
+            <li>
+                <a routerLink="/terms-and-conditions" class="link-gray">
+                    terms and conditions
+                </a>
+            </li>
+        </ul>
+        <span class="font-weight-bold toggle-btn d-block d-md-none" (click)="toggleMenu()">
+           
+                more ☰
+           
+           
+        </span>
+    </nav>
+   
+</footer>
