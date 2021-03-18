@@ -1,0 +1,226 @@
+/* based on angular-toastr css https://github.com/Foxandxss/angular-toastr/blob/cb508fe6801d6b288d3afc525bb40fee1b101650/dist/angular-toastr.css */
+@import 'var';
+@import 'abstracts/mixins-core';
+
+/* position */
+.toast-center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toast-top-center {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-center {
+  bottom:3rem ;
+  right: 0;
+  width: 100%;
+}
+.toast-top-full-width {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-full-width {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+.toast-top-right {
+  left:auto;
+  transform: translateX(0);
+  right: 12px;
+ 
+}
+.toast-bottom-right {
+  right: 2vw;
+  bottom: 2rem;
+
+  @include res(sm){
+    right: 4vw;
+  }
+}
+.toast-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+/* toast styles */
+.toast-title {
+  font-weight: bold;
+  @include medium-fs;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: Met;
+  position: relative;
+  z-index: 2;
+}
+.toast-message {
+  word-wrap: break-word;
+  @include small-fs;
+  font-weight: 600;
+  color: $gray-text;
+  position: relative;
+  z-index: 2;
+}
+.toast-message a,
+.toast-message label {
+  color: #FFFFFF;
+}
+.toast-message a:hover {
+  color: #CCCCCC;
+  text-decoration: none;
+}
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  color: $gray-text;
+
+  span{
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  /* opacity: 0.8; */
+}
+.toast-close-button:hover,
+.toast-close-button:focus {
+  
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  span{
+    color: #000000;
+  }
+}
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+button.toast-close-button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.toast-container {
+  pointer-events: none;
+  position: fixed;
+  z-index: 999999;
+}
+.toast-container * {
+  box-sizing: border-box;
+}
+.toast-container .ngx-toastr {
+  position: relative;
+  overflow: hidden;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding:1.5rem 2rem 1.5rem 8rem;
+  width: 320px;
+  max-width: 100%;
+  border-radius: 0.6rem;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  box-shadow:$shadow-sm;
+  transition: $transition-secondary;
+  color: $black;
+  //border: 1.5px solid $gray-100;
+  animation: fade_up_big 0.25s $cubic-bounce forwards;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 18rem;
+    width: 18rem;
+    transform: translate(-50%,-25%);
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.35;
+  }
+}
+.toast-container .ngx-toastr:hover {
+  box-shadow: $shadow-light;
+  opacity: 1;
+  
+}
+/* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/info-circle.svg */
+.toast-info {
+  background-image: url("/assets/img/icons/info.svg");
+  
+}
+/* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/times-circle.svg */
+.toast-error {
+  background-image:  url("/assets/img/icons/error.svg");
+}
+/* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/check.svg */
+.toast-success {
+  background-image:  url("/assets/img/icons/success.svg");
+}
+/* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/exclamation-triangle.svg */
+.toast-warning {
+  background-image:  url("/assets/img/icons/warning.svg");
+}
+.toast-container.toast-top-center .ngx-toastr,
+.toast-container.toast-bottom-center .ngx-toastr {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.toast-container.toast-top-full-width .ngx-toastr,
+.toast-container.toast-bottom-full-width .ngx-toastr {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ngx-toastr {
+  background-color: $white;
+  pointer-events: auto;
+}
+.toast-success {
+  //border: 1.5px solid $success !important;
+
+  &::before{
+    background-color: $success;
+  }
+}
+.toast-error {
+ // border: 1.5px solid $danger !important;
+ &::before{
+  background-color: $danger;
+}
+}
+.toast-info {
+ // border: 1.5px solid $color-primary !important;
+ &::before{
+  background-color: $color-primary;
+}
+}
+.toast-warning {
+ // border: 1.5px solid $warning !important;
+ &::before{
+  background-color: $warning;
+}
+}
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+

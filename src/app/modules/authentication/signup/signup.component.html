@@ -3,7 +3,7 @@
     <div class="container">
         <div class="border-primary py-3">
             <h3 class="text-primary text-center">
-                Developer Login
+                Developer Signup
             </h3>
         </div>
 
@@ -15,7 +15,25 @@
                         <div class="form-box">
                         <form class="form" [formGroup]="form" (submit)="submit()">
                             <div class="form-group">
-                                <label for="email" class="form-label required">Username or email</label>
+                                <label for="name" class="form-label required">Name</label>
+                                <input formControlName="name" type="text" class="form-input" placeholder="Enter your name">
+
+                                <div
+                                class="validation"
+                                *ngIf="submitted && name!.invalid"
+                              >
+                                <p *ngIf="name!.errors!.required">
+                                  Please enter your name!
+                                </p>
+
+                                <p *ngIf="name!.errors!.pattern">
+                                  Name can only consist alphabets!
+                                </p>
+                              </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email</label>
                                 <input formControlName="email" type="text" class="form-input" placeholder="Enter your username or email">
 
                                 <div
@@ -33,7 +51,23 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="email" class="form-label required">Password</label>
+                                <label for="name" class="form-label required">Username</label>
+                                <input formControlName="username" type="text" class="form-input" placeholder="Enter your username">
+
+                                <div
+                                class="validation"
+                                *ngIf="submitted && username!.invalid"
+                              >
+                                <p *ngIf="username!.errors!.required">
+                                  Please enter your username!
+                                </p>
+
+                               
+                              </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label required">Password</label>
                                 <input formControlName="password" type="password" class="form-input" placeholder="Enter your password">
 
                                 <div
@@ -44,21 +78,34 @@
                                   Please enter your password!
                                 </p>
                               </div>
-
                             </div>
 
+                            <div class="form-group">
+                                <label for="cpassword" class="form-label required">Confirm Password</label>
+                                <input name="cpassword" type="password" class="form-input" placeholder="Confirm your password">
 
+                                <div
+                                class="validation"
+                                *ngIf="submitted && password!.invalid"
+                              >
+                                <p *ngIf="password!.errors!.required">
+                                  Please enter your password!
+                                </p>
+                              </div>
+                            </div>
+                          
                             <div class="form-btn">
                                 <button class="btn btn-dark"
                                 [class.spinner]="loading"
                                 type="submit">
-                                    Login
+                                    Signup
                                 </button>
                             </div>
+
                         </form>
                         <div class="form-social-btns">
                             <p class="text-center border-gray-100 pb-4">
-                                or login using
+                                or signup using
                             </p>
 
                             <div class="row no-gutters">
@@ -84,11 +131,11 @@
                         </div>
                     </div>
                 </div>
-                <a routerLink='/signup' class="card card-border card-link">
+                <a routerLink='/login' class="card card-border card-link">
                     <p class="text-gray text-center">
-                        New here?
+                        Already a member?
                         <span class="link">
-                        Make a new account
+                        Login Now
                         </span>
                     </p>
                 </a>
@@ -98,7 +145,7 @@
         </div>
     </div>
 
-    <img src="assets/img/vectors/login-vector.svg" alt="MeetDev Login" class="img-login">
+    <img src="assets/img/vectors/signup-vector.svg" alt="MeetDev Signup" class="img-login">
 </section>
 <footer-secondary></footer-secondary>
 

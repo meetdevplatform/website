@@ -45,3 +45,18 @@
         font-size: 2.28rem;
 }   
 }
+
+
+@mixin large-fs { //appx 20px - 18px
+    font-size: 2rem;
+
+    @include res(md){
+        font-size: 2.22rem;
+    }
+    @include res(sm){
+        font-size: 2.1rem;
+    }
+    @include res(xxs){
+        font-size: 2.57rem;
+}   
+}

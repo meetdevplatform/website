@@ -2,22 +2,32 @@
 <section class="content-wrapper content-auth">
     <div class="container">
         <div class="border-primary py-3">
-            <h3 class="text-primary text-center">
-                Verify Email
+            <h3 class="text-center">
+                Complete Profile
             </h3>
+            <p class="text-gray text-center">
+                
+            </p>
         </div>
 
         <div class="auth-box">
             <div class="row justify-content-center">
-                   <div class="col-lg-5 col-md-5 col-sm-10">
-                    <div class="card mb-4">
+                   <div class="col-lg-6 col-md-7 col-sm-10">
+                    <div class="card card-border"
+                    >
+                        <span class="link">
+                            Resend Code
+                            </span>
+                    </div>
+
+                    <div class="card mt-4">
                         <div class="form-box">
-                        <form class="form" [formGroup]="form" (submit)="submit()">
+                        <form class="form">
                             <div class="form-group">
                                 <label for="email" class="form-label required">Verfication Code</label>
-                                <input formControlName="code" type="text" class="form-input" placeholder="Enter verfication code sent on your mail">
+                                <input name="code" type="text" class="form-input" placeholder="Enter verfication code sent on your mail">
 
-                                <div
+                                <!-- <div
                                 class="validation"
                                 *ngIf="submitted && code!.invalid"
                               >
@@ -25,25 +35,18 @@
                                   Please enter your code!
                                 </p>
 
-                              </div>
+                              </div> -->
                             </div>
                             <div class="text-center">
                                 <button class="btn btn-dark" 
-                                [class.spinner]="btnLoading" type="submit">
+                                type="submit">
                                     Verify
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <a (click)="sendCode()" class="card card-border card-link"
                
-                [class.spinner]="sendingCode"
-                >
-                    <span class="link">
-                        Resend Code
-                        </span>
-                </a>
                    </div>
             </div>
         </div>

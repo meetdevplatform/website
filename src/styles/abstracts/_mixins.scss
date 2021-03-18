@@ -36,3 +36,41 @@
         };
     }
 }
+
+
+@mixin spinner($color-1,$color-2,$color-bg){
+    &.spinner
+    {
+        position: relative;
+        pointer-events: none;
+        &::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-top: -1.25rem;
+            margin-left: -1.25rem;
+            border-radius: 50%;
+            border: 2.5px solid $color-1;
+            border-top-color: $color-2;
+            animation: spinner .8s linear infinite;
+          }
+
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-radius: 1rem;
+            left: 0;
+            top: 0;
+            animation: fade_in .2s linear forwards;
+            height: 100%;
+            background-color: rgba($color-bg,0.75);
+            z-index: 1;
+        }
+    }
+}

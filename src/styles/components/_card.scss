@@ -15,12 +15,26 @@
         padding: 1.5rem 2.5rem;
     }
     &-link{
+        cursor: pointer;
+        text-align: center;
+        @include spinner($black,$color-primary,$white);
+
+         .link{
+        transition: $transition-secondary;
+         font-weight: 600;
+
+        color: $color-primary;
+        }
+
         display: block;
         transition: $transition-secondary;
         &:hover{
             background-color: $color-primary-light;
             box-shadow: $shadow-light;
             transform: translateY(-2px);
+            .link{
+                 color: $color-secondary;
+            }
         }
         &:focus{
             box-shadow: 0 0 0 2px $gray-300;

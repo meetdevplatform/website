@@ -1,0 +1,18 @@
+@import 'var';
+
+.content-wrapper{
+    background: linear-gradient(234.77deg, #F0F7FF 8.59%, #FFFFFF 55.66%);
+}
+
+.img-login{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 45vw;
+
+    @include res(md){
+        position: relative;
+       display: none;
+    }
+}

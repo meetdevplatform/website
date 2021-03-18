@@ -1,11 +1,15 @@
+button:disabled{
+    //opacity: 0.5;
+}
 .btn{
     border-radius: 0.4rem;
-    padding: 1.5rem 4rem;
+    padding: 1.4rem 4rem;
     text-align: center;
     transition: $transition-secondary;
-
+    overflow: hidden;
+    @include spinner($gray-100,$color-primary,$color-secondary);
     @include res(sm){
-        padding: 1.8rem 4rem;
+        padding: 1.6rem 4rem;
     }
     &-primary{
 
@@ -60,15 +64,18 @@
 
         &:hover{
             background-color:$gray-100;
-            transform: translateY(-2px);
+            //transform: translateY(-2px);
         }
         &:focus{
             box-shadow: 0 0 0 2px $gray-300;
         }
         &:active{
-            transform: translateY(0);
+            //transform: translateY(0);
             box-shadow: $shadow-active;
              background-color: $gray-300;
          }
     }
+      
 }
+
+
