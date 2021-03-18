@@ -58,12 +58,17 @@
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/utilities";
 
+
+
 //-----------website css------------------//
 
 ///abstracts
 @import "abstracts/variables";
 @import "abstracts/mixins-core";
 @import "abstracts/mixins";
+
+//nice select scss
+@import 'nice-select/scss/nice-select.scss';
 
 //basic
 @import "normalize.css";

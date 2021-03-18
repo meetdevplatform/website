@@ -1,6 +1,10 @@
+select{
+    display: none;
+}
 .form{
     &-group{            
         margin-bottom: 1.5rem;
+        
     }
     &-label{
         @include small-fs;
@@ -17,13 +21,18 @@
     &-social-btns{
         margin-top: 2rem;
     }
-    &-input{
+    &-input,&-select{
         border: 1.8px solid $gray-200;
         padding: 1.6rem 1.6rem;
-        display: block;
-        width: 100%;
         outline: none !important;
         border-radius: 0.8rem;
+        &:focus{
+            border-color: $color-primary;
+        }
+    }
+    &-input{
+        display: block;
+        width: 100%;
         color: $color-secondary;
         transition: $transition-primary;
         &::-webkit-input-placeholder {
@@ -31,9 +40,13 @@
             color: $gray-text;
           }
 
-          &:focus{
-              border-color: $color-primary;
-          }
+        
+    }
+    &-select{
+        display: flex;
+        font-weight: 500;
+        font-family: Met;
+        align-items: center;
     }
 }
 

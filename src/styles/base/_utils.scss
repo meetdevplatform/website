@@ -3,12 +3,18 @@
     background-color: $gray-bg;
 }
 
+.font-600{
+    font-weight: 600 !important;
+}
+.font-500{
+    font-weight: 500 !important;
+}
 .text-primary{
-    color: $color-primary;
+    color: $color-primary !important;
 }
 
 .text-secondary{
-    color: $color-secondary;
+    color: $color-secondary !important;
 }
 
 .border{

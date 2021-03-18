@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeaderSecondaryModule } from 'src/app/shared/components/header-secondary/header-secondary.module';
 import { FooterSecondaryModule } from 'src/app/shared/components/footer-secondary/footer-secondary.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NiceSelectModule } from "ng-nice-select";
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     HeaderSecondaryModule,
     FooterSecondaryModule,
     FormsModule,
+    NiceSelectModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]

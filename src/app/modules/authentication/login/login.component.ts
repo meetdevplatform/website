@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
 
   submit(){
     this.submitted = true;
+  
     if(this.form.valid){
       this.loading =true;
       setTimeout(()=>{

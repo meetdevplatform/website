@@ -39,4 +39,16 @@ export class UIFunctions {
             console.log($(el).closest("ul"));
         }
 
+        selectHtml(wrapper:any){
+            var wrapperRef = $(wrapper);
+            wrapperRef.on('change','select', function(event:any) {
+                var valueOuter = event.target.value;
+                console.log(valueOuter);
+                return valueOuter;
+              });
+        }
+
+        onSelectChange(event:any){
+            console.log(event.target);
+        }
 }

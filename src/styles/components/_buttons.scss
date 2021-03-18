@@ -11,8 +11,41 @@ button:disabled{
     @include res(sm){
         padding: 1.6rem 4rem;
     }
-    &-primary{
+    &-sm{
+        padding: 1rem 2rem;
+    }
+    &-outline{
+        border: 1.5px solid $gray-200;
+        background-color: $gray-bg;
+        color: $black;
+        box-shadow: none;
 
+        &:hover{
+            border-color: $gray-300;
+            background-color: $gray-200;
+            transform: translateY(-2px);
+        }
+        &:focus{
+            box-shadow: 0 0 0 3px $color-primary-light;
+        }
+        &:active{
+           box-shadow: none;
+            transform: translateY(0);
+            color: $color-primary;
+            background-color: $color-primary-light;
+        }
+    }
+    &-icon{
+        display: flex;
+        align-items: center;
+
+        .icon{
+            margin-right: 0.8rem;
+        }
+    }
+    &-primary{
+        color: $white;
+        background-color: $color-primary;
     }
     &-secondary{
 
