@@ -5,7 +5,8 @@
 
 h1,h2,h3,h4,h5,h6{
     font-family: Met;
-    font-weight: 700;
+    font-weight: 600;
+    
 }
 
 label, input, textarea{
@@ -61,7 +62,11 @@ h6{
         font-size: 2rem;
     }
 }
-
+span{
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
 //links
 .link{
     &-primary{
@@ -77,12 +82,26 @@ h6{
         color: $color-primary;
     }
 }
+&-danger{
+    color: $danger;
+    &:hover{
+        color: darken($color: $danger, $amount: 0.5);
+    }
+}
 }
 
 
 
 //text utils
 
-.text-gray{
-    color: $gray-text;
+.text{
+    &-gray{
+        color: $gray-text;
+    }
+    &-danger{
+        color: $danger;
+    }
+    &-tertiary{
+        color: $color-tertiary;
+    }
 }

@@ -1,0 +1,73 @@
+<section class="content-wrapper content-auth bg-gray">
+    <div class="container">
+        <div class="row justify-content-center border-gray-100 pb-5">
+            <div class="col-md-10">
+                <div class="banner banner-secondary">
+                    <div class="row justify-content-between align-items-end">
+                    <div class="col-sm-6 align-self-start">
+                        <div class="banner-content">
+                            <h3 class="text-white">
+                                Welcome to <span class="text-primary">MeetDev.</span>
+                                find your next inspiration here.
+                            </h3>
+                        </div>
+                    </div> 
+                   
+                    <div class="col-sm-5">
+                    <div class="banner-img">
+                        <img src="assets/img/vectors/get-started.png" alt="MeetDev get started">
+                    </div>
+                </div>
+            </div>
+                </div>
+
+               
+
+                
+            </div>
+            <div class="col-md-8">
+                 
+                <h5 class="text-center text-secondary mt-5 mb-3">
+                    Before we begin, tell us about your interested domains in developement, so we can recommened you projects that you would like.
+                </h5>
+
+
+                <p class="text-center text-gray">
+                    Select at least 5 options.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="interests-options">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-6 d-flex w-100" *ngFor="let interest of interests; let i = index">
+                    <div class="card card-border card-interest" id="{{'interest-'+i}}" (click)="toggleInterest(interest,i)">
+                        <div class="check">
+                            <i data-feather="check" class="text-tertiary"></i>
+                        </div>
+                        <h6 class="text">
+                            {{interest}}
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="validation" *ngIf="submitted && this.selectedInterests.length < 5">
+                <p class="text-center">
+                    Please select at least 5 interests!
+                </p>
+            </div>
+            <div class="text-center mt-5">
+                <button 
+                (click)="submitInterests()"
+                [class.spinner]="loading"
+                type="button" class="btn btn-big btn-primary">
+                    Go Ahead
+                </button>
+            </div>
+
+        </div>
+        </div>
+        </section>
+

@@ -1,7 +1,5 @@
 
-@mixin btn-shadow($color,$opacity) {
-    box-shadow: 0 0.5rem 2rem 0 rgba($color,$opacity)
-}
+
 
 @mixin base-fs { //appx 16px - 14px
     font-size: 1.6rem;

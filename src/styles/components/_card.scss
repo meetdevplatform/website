@@ -51,4 +51,12 @@
             background-color: $gray-100;
         }
     }
+    &-navigation{
+        box-shadow: $shadow-xs;
+        padding: 1.2rem 2rem;
+        margin-bottom: 2rem;
+        @include res(sm){
+            padding: 0;
+        }
+    }
 }

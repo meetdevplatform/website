@@ -1,0 +1,84 @@
+<form class="form" [formGroup]="form" (submit)="submit()">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group form-select-wrapper">
+                <label for="role" class="form-label required">Who you are ?</label>
+                <select 
+                formControlName="role"
+                class="form-select wide"
+                nice-select (change)="ui.onSelectChange($event)" [value]="selectedValue" [attr.data-value]="selectedValue">
+                <option value="null" disabled>Roles available</option>
+                <option value="0">Student</option>
+                <option value="1">Working Professional</option>
+                  </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" *ngIf="role!.value=='0'">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="college" class="form-label required">College name</label>
+                <input type="text" class="form-input" placeholder="Enter your college name">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="college" class="form-label required">Degree</label>
+                <input type="text" class="form-input" placeholder="for eg. B. Tech">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="college" class="form-label required">Course</label>
+                <input type="text" class="form-input" placeholder="for eg. Computer Science">
+            </div>
+        </div>
+        <div class="col-6">
+                <div class="form-group form-select-wrapper">
+                    <label for="role" class="form-label required">Beginning Year</label>
+                    <select 
+                    class="form-select wide"
+                    nice-select (change)="ui.onSelectChange($event)" [value]="selectedValue" [attr.data-value]="selectedValue">
+                    <option value="null" disabled>Select beginning year</option>
+                    <option value="year" *ngFor="let year of yearList">{{year}}</option>
+                      </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group form-select-wrapper">
+                <label for="role" class="form-label required">Completion Year</label>
+                <select 
+                class="form-select wide"
+                nice-select (change)="ui.onSelectChange($event)" [value]="selectedValue" [attr.data-value]="selectedValue">
+                <option value="null" disabled>Select completion year</option>
+                <option value="year" *ngFor="let year of yearList">{{year}}</option>
+                  </select>
+        </div>
+    </div>
+    </div>
+   
+    <div class="row" *ngIf="role!.value=='1'">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="college" class="form-label required">Organization name</label>
+                <input type="text" class="form-input" placeholder="Enter your Organization name">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="college" class="form-label required">Your role in organization</label>
+                <input type="text" class="form-input" placeholder="for eg. Senior Web Developer">
+            </div>
+      
+    </div>
+    </div>
+    <div class="form-btn">
+        <button class="mx-auto btn btn-sm btn-primary"
+        type="submit" 
+        [class.spinner]="loading"
+        >
+            Submit Details
+        </button>
+    </div>
+</form>

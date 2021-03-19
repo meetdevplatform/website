@@ -85,12 +85,45 @@
 
       }
   }
-
+  
   .menu{
     &-navigation{
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-around;
+      @include res(sm){
+        min-height: 5rem;
+        overflow: hidden;
+        cursor: pointer;
+        &::after {
+          content: "☰";
+          position: absolute;
+          display: inline-flex;
+          align-items: center;
+          top: 2.5rem;
+          right: 2rem;
+          transform: translateY(-50%);
+          z-index: 10;
+          font-size: 2rem;
+          pointer-events: none;
+          font-weight: 600;
+      }
+      }
+      &.open{
+        @include res(sm){
+          display: block;
+          overflow: visible;
+          &::after {
+            content: "";
+          }
+          .menu-tab{
+            position: relative;
+            padding: 1rem 1.6rem;
+            pointer-events: all;
+          }
+        }
+      }
     }
     &-tab{
       cursor: pointer;
@@ -99,6 +132,16 @@
       background-color: $white;
       padding:0.8rem 1.6rem;
       border-radius: 0.6rem;
+      @include res(sm){
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        transition: $transition-secondary;
+        transition-duration: 0.25s;
+      }
       .icon{
         height: 3rem;
         width: 3rem;
@@ -128,6 +171,10 @@
             stroke: $color-primary
           }
         }
+
+        @include res(sm){
+          z-index: 5;
+        }
       }
 
       &.completed{
@@ -146,3 +193,32 @@
       }
     }
   }
+
+/*
+  <div class="card card-navigation"
+  >
+     <nav class="menu-wrapper" role="navigation">
+      <ul class="menu-navigation" id="form-navigation" (click)="ui.toggleNavMenu('#form-navigation')">
+          <li class="menu-tab" (click)="goToOrg()" 
+          [class.active]="tab == 0"
+          [class.completed]="tab == 1"
+          >
+              <div class="icon">
+                  <i data-feather="check"></i>
+              </div>
+                  <span class="text">
+                      Organization Details
+                  </span>
+          </li>
+          <li class="menu-tab" (click)="goToInterest()"
+          [class.active]="tab == 1">
+              <div class="icon">
+                  <i data-feather="check"></i>
+              </div>
+                  <span class="text">
+                      Interests
+                  </span>
+          </li>
+      </ul>
+  </nav>
+  </div>*/

@@ -1,0 +1,101 @@
+
+<section class="content-wrapper content-auth">
+    <div class="container">
+        <div class="border-primary py-3">
+            <h3 class="text-center mb-4">
+                Welcome <span class="text-primary">Username</span> 
+            </h3>
+            <p class="text-secondary text-center font-500">
+               Fill the details below to complete your profile.
+            </p>
+        </div>
+
+        <div class="auth-box">
+            <div class="row justify-content-center">
+                   <div class="col-lg-8 col-md-10">
+                    <div class="card card-navigation"
+                    >
+                       <nav class="menu-wrapper" role="navigation">
+                        <ul class="menu-navigation" id="form-navigation" (click)="ui.toggleNavMenu('#form-navigation')">
+                            <li class="menu-tab" (click)="goToBasic()" 
+                            [class.active]="tab == 0"
+                            [class.completed]="tab == 1"
+                            >
+                                <div class="icon">
+                                    <i data-feather="check"></i>
+                                </div>
+                                    <span class="text">
+                                        Authentication Details
+                                    </span>
+                            </li>
+                            <li class="menu-tab" (click)="goToOrg()"
+                            [class.active]="tab == 1">
+                                <div class="icon">
+                                    <i data-feather="check"></i>
+                                </div>
+                                    <span class="text">
+                                        Organization Details
+                                    </span>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+                    <div class="card pt-3">
+                        <div class="card-header">
+                            <h5 class="text-center" *ngIf="tab == 0">
+                                Authentication Details
+                            </h5>
+                            <h5 class="text-center" *ngIf="tab == 1">
+                                Organization Details
+                            </h5>
+                        </div>
+                        <div class="form-box" 
+                        [class.d-block]="tab == 0"
+                        [class.d-none]="tab == 1">
+
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="username" class="form-label required">Username</label>
+                                        <input type="text" class="form-input" placeholder="Enter your username">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password" class="form-label required">Password</label>
+                                        <input type="password" class="form-input" placeholder="Enter your password">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="cpassword" class="form-label required">Confirm Password</label>
+                                        <input type="password" class="form-input" placeholder="Confirm your password">
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="form-btn">
+                                <button class="mx-auto btn btn-sm btn-primary"
+                                type="button" (click)="goToOrg()"
+                                >
+                                    Next
+                                </button>
+                            </div>
+                        </form>
+
+                     
+                    </div>
+
+                    <div class="form-box"
+                    [class.d-block]="tab == 1"
+                    [class.d-none]="tab == 0"
+                    >
+                    <organization-form (signalSubmit)="getOrgDetails($event)"></organization-form>
+                    </div>
+                </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+</section>

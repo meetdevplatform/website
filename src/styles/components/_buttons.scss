@@ -1,6 +1,11 @@
 button:disabled{
     //opacity: 0.5;
 }
+@mixin btn-focus($color) {
+    &:focus{
+        box-shadow: 0 0 0 3px $color;
+    }
+}
 .btn{
     border-radius: 0.4rem;
     padding: 1.4rem 4rem;
@@ -11,6 +16,17 @@ button:disabled{
     @include res(sm){
         padding: 1.6rem 4rem;
     }
+    @include btn-focus($gray-text);
+    &:hover{
+        transform: translateY(-2px);
+    }
+    &:active{
+        box-shadow: none;
+        transform: translateY(0);
+     }
+   
+   
+
     &-sm{
         padding: 1rem 2rem;
     }
@@ -23,14 +39,9 @@ button:disabled{
         &:hover{
             border-color: $gray-300;
             background-color: $gray-200;
-            transform: translateY(-2px);
         }
-        &:focus{
-            box-shadow: 0 0 0 3px $color-primary-light;
-        }
+        @include btn-focus($color-primary-light);
         &:active{
-           box-shadow: none;
-            transform: translateY(0);
             color: $color-primary;
             background-color: $color-primary-light;
         }
@@ -46,6 +57,13 @@ button:disabled{
     &-primary{
         color: $white;
         background-color: $color-primary;
+        @include btn-focus($color-primary);
+         &:hover{
+            background-color: darken($color-primary, 8%);
+        }
+        &:active{
+            background-color: darken($color-primary,15%);
+        }
     }
     &-secondary{
 
@@ -59,17 +77,13 @@ button:disabled{
         @include btn-shadow($dark, 0.25);
 
         &:hover{
-            box-shadow: none;
-            transform: translateY(-2px);
+            background-color: darken($dark, 3%);
         }
-        &:focus{
-            box-shadow: 0 0 0 3px $gray-text;
-        }
+     
         &:active{
-           box-shadow: none;
-            transform: translateY(0);
-            background-color: darken($dark, 0.1);
+            background-color: darken($dark, 8%);
         }
+
     }
     &-social{
         background-color: $white;
@@ -97,13 +111,9 @@ button:disabled{
 
         &:hover{
             background-color:$gray-100;
-            //transform: translateY(-2px);
         }
-        &:focus{
-            box-shadow: 0 0 0 2px $gray-300;
-        }
+      
         &:active{
-            //transform: translateY(0);
             box-shadow: $shadow-active;
              background-color: $gray-300;
          }

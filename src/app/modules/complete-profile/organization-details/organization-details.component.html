@@ -1,0 +1,33 @@
+
+<section class="content-wrapper content-auth">
+    <div class="container">
+        <div class="border-primary py-3">
+            <h3 class="text-center mb-4">
+                Complete Profile
+            </h3>
+            <p class="text-secondary text-center font-500">
+               Fill the details about your organization/college.  <br>
+               This information will be used to show you projects posted by your friends and collegue.
+            </p>
+        </div>
+
+        <div class="auth-box">
+            <div class="row justify-content-center">
+                   <div class="col-lg-8 col-md-10">
+                    <div class="card pt-3">
+                        <div class="card-header">
+                            <h5 class="text-center">
+                                College/Organization Details
+                            </h5>
+                           
+                        </div>
+                        <div class="form-box">
+                      <organization-form (signalSubmit)="submitForm($event)"></organization-form>
+                    </div>
+                </div>
+               
+                   </div>
+            </div>
+        </div>
+    </div>
+</section>

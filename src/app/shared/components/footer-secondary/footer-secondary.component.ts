@@ -9,21 +9,9 @@ declare var $:any;
 })
 export class FooterSecondaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ui :UIFunctions) { }
   ngOnInit(): void {
-    $('.link-gray').on("click", this.toggleMenu);
-    
-    $(document).on('click', function (e:any) {
-      if ($(e.target).closest(".toggle-btn").length === 0
-      ) {
-          $("#footer-mobile-menu").removeClass('open');
-      }
-  });
-
+    this.ui.initFeather();
+    this.ui.addOptionEventListener('#footer-toggle', '#footer-mobile-menu');
   }
-  
-  toggleMenu(){
-    document.getElementById('footer-mobile-menu')?.classList.toggle('open');
-  }
-
 }

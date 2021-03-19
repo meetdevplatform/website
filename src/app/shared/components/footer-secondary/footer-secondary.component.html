@@ -13,7 +13,7 @@
             </li>
         </ul>
     </nav>
-   
+
     <nav role="navigation" class="position-relative">
         <ul class="footer-secondary-links navigation-mobile" id="footer-mobile-menu">
             <li>
@@ -31,13 +31,18 @@
                     terms and conditions
                 </a>
             </li>
+            <!-- <li>
+                <a routerLink="/terms-and-conditions" class="link-danger d-flex align-items-center font-weight-bold">
+                    <i data-feather="power" class="icon-sm text-danger mr-2"></i>
+                    logout
+                </a>
+            </li> -->
         </ul>
-        <span class="font-weight-bold toggle-btn d-block d-md-none" (click)="toggleMenu()">
-           
-                more ☰
-           
-           
+        <span class="font-weight-bold toggle-btn d-block d-md-none" id="footer-toggle"
+            (click)="ui.toggleOptionMenu('#footer-mobile-menu')">
+            more ☰
         </span>
+
     </nav>
-   
+
 </footer>

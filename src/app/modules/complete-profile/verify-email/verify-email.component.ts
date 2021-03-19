@@ -32,7 +32,7 @@ export class VerifyEmailComponent implements OnInit {
         this.btnLoading = false;
         console.log("Form Submitted");
         this.submitted = false;
-        this.router.navigate(['/login']);
+        this.router.navigate(['/complete-profile/organization']);
       },1500)
     }
   }

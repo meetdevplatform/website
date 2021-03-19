@@ -1,0 +1,60 @@
+@import 'var';
+@import 'components/banners';
+
+.card-interest{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+    transition: $transition-primary;
+    transition-duration: 0.2s;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    @include flex-center;
+    .text{
+        text-align: center;
+        transition: $transition-primary;
+    }
+
+    .check{
+        opacity: 0;
+        position: absolute;
+        left: 1.5rem;
+        top: 50%;
+        @include flex-center;
+        height: 3rem;
+        width: 3rem;
+        @include res(sm){
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        border-radius: 50%;
+        background-color: $white;
+        transition: $transition-bounce;
+        transform: translate(-0.5rem,-50%) scale(0);
+    }
+
+    &:hover{
+        @include btn-shadow($gray-100, 0.1);
+        background-color: lighten( $gray-100,5%);
+        border-color:$gray-200;
+    }
+
+    &.selected{
+        background-color: $color-tertiary;
+        border-color:$color-tertiary;
+        padding-left: 4rem;
+        @include btn-shadow($color-tertiary, 0.5);
+        .check{
+            transform: translate(0,-50%) scale(1);
+            opacity: 1;
+        }
+        .text{
+            color: $white;
+        }
+    }
+   
+}
+
+.interests-options{
+    margin-top: 3rem;
+}

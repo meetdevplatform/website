@@ -35,7 +35,6 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
   submit(){
     console.log("Signup");
     this.submitted = true;
@@ -45,9 +44,8 @@ export class SignupComponent implements OnInit {
         console.log("Signup completed");
         this.submitted = false;
         this.loading = false;
-        this.router.navigate(['/verify-email']);
+        this.router.navigate(['/complete-profile/verify-email']);
       },1500)
     }
   }
-
 }
