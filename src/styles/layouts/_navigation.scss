@@ -93,7 +93,7 @@
       align-items: center;
       justify-content: space-around;
       @include res(sm){
-        min-height: 5rem;
+        min-height: 6rem;
         overflow: hidden;
         cursor: pointer;
         &::after {
@@ -101,7 +101,7 @@
           position: absolute;
           display: inline-flex;
           align-items: center;
-          top: 2.5rem;
+          top: 3rem;
           right: 2rem;
           transform: translateY(-50%);
           z-index: 10;
