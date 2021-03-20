@@ -97,7 +97,20 @@
         </div>
     </div>
 
-    <img src="assets/img/vectors/login-vector.svg" alt="MeetDev Login" class="img-login">
+    <img
+    class="img-login"
+    sizes="(max-width: 1000px) 50vw,
+            (max-width: 900px) 0vw,
+            1000px"
+            [defaultImage]="'assets/img/vectors/login-vector_w_100.png'"
+            [lazyLoad]="'
+            assets/img/vectors/login-vector_w_100.png 100w,
+            assets/img/vectors/login-vector_w_651.png 651w,
+            assets/img/vectors/login-vector_w_1000.png 1000w
+            '" 
+            [useSrcset]="true"
+            alt="MeetDev Login">
+
 </section>
 
 

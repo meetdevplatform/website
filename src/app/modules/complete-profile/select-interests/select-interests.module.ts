@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SelectInterestsComponent } from './select-interests.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image'; // <-- import it
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   declarations: [SelectInterestsComponent],
   imports: [
     CommonModule,
+    LazyLoadImageModule,
     RouterModule.forChild(routes)
   ]
 })

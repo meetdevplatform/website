@@ -4,7 +4,7 @@
             <div class="col-md-10">
                 <div class="banner banner-secondary">
                     <div class="row justify-content-between align-items-end">
-                    <div class="col-sm-6 align-self-start">
+                    <div class="col-md-6 align-self-start">
                         <div class="banner-content">
                             <h3 class="text-white">
                                 Welcome to <span class="text-primary">MeetDev.</span>
@@ -13,9 +13,21 @@
                         </div>
                     </div> 
                    
-                    <div class="col-sm-5">
+
+                    <div class="col-lg-5 col-md-6">
                     <div class="banner-img">
-                        <img src="assets/img/vectors/get-started.png" alt="MeetDev get started">
+                        <img
+                        class="w-100"
+                        sizes="(max-width: 1000px) 27vw,
+                                (max-width: 576px) 83vw,
+                                1000px"
+                                [defaultImage]="'assets/img/vectors/get-started_w_50.png'"
+                                [lazyLoad]="'
+                                assets/img/vectors/get-started_w_508.png 508w,
+                                assets/img/vectors/get-started_w_1000.png 1000w
+                                '" 
+                                [useSrcset]="true"
+                                alt="MeetDev get started">
                     </div>
                 </div>
             </div>

@@ -1,6 +1,14 @@
 <div class="header d-flex align-items-center justify-content-between">
     <div class="header-logo">
-        <img src="assets/img/logo.png" alt="MeetDev logo">
+        <img
+        sizes="(max-width: 1000px) 18vw,
+                (max-width: 576px) 25vw,
+                500px"
+                srcset="
+                assets/img/logo_w_150.png 150w,
+                assets/img/logo_w_500.png 500w"
+                src="logo_w_500.png"
+                alt="MeetDev logo">
     </div>
 
     <nav role="navigation" class="position-relative">
