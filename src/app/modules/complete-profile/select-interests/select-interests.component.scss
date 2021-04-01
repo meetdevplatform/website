@@ -15,7 +15,7 @@
         transition: $transition-primary;
     }
 
-    .check{
+    .check-box{
         opacity: 0;
         position: absolute;
         left: 1.5rem;
@@ -44,7 +44,7 @@
         border-color:$color-tertiary;
         padding-left: 4rem;
         @include btn-shadow($color-tertiary, 0.5);
-        .check{
+        .check-box{
             transform: translate(0,-50%) scale(1);
             opacity: 1;
         }

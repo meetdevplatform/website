@@ -24,7 +24,6 @@ select{
     &-input,&-select{
         border: 1.8px solid $gray-200;
         padding: 1.6rem 1.6rem;
-        outline: none !important;
         border-radius: 0.8rem;
         &:focus{
             border-color: $color-primary;
@@ -39,8 +38,6 @@ select{
             font-weight: 500;
             color: $gray-text;
           }
-
-        
     }
     &-select{
         display: flex;

@@ -1,0 +1,45 @@
+@import 'var';
+@import 'layouts/header';
+
+.header{
+    &-left{
+        display: flex;
+    }
+    &-search-wrapper{
+        margin-left: 3vw;
+    }
+    &-menu{
+        display: flex;
+        align-items: center;
+        &-item{
+            
+            a{
+                @include flex-center;
+                flex-direction: column;
+            }
+            &:not(:last-child){
+                margin-right: 2.5rem;
+               
+            }
+
+            img,svg{
+                width: 2.5rem;
+                height: 2.5rem;
+                display: block;
+            }
+            svg{
+                color: $black;
+            }
+            img{
+                filter: brightness(0);
+            }
+            span{
+                margin-top: 0.75rem;
+                @include small-fs;
+                text-align: center;
+                font-weight: 600;
+                color: $black;
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
-<header-secondary></header-secondary>
+<header-primary *ngIf="!showSecondary"></header-primary>
+<header-secondary *ngIf="showSecondary"></header-secondary>
 <router-outlet></router-outlet>
-<footer-secondary></footer-secondary>
+<footer-secondary *ngIf="showSecondary"></footer-secondary>

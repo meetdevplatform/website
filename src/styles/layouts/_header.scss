@@ -13,8 +13,12 @@
     }
 
     &-logo{
+        @include flex-center;
         img{
             height: 3.2rem;
+            @include res(lg){
+                height: 2.8rem;
+            }
         }
     }
 

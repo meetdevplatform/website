@@ -1,0 +1,81 @@
+<div class="header container-primary d-flex align-items-center justify-content-between">
+   <div class="header-left">
+    <div class="header-logo">
+        <img
+        sizes="(max-width: 1000px) 18vw,
+                (max-width: 576px) 25vw,
+                500px"
+                srcset="
+                assets/img/logo_w_300.png 300w,
+                assets/img/logo_w_500.png 500w"
+                src="logo_w_500.png"
+                alt="MeetDev logo">
+    </div>
+
+    <div class="header-search-wrapper">
+        <header-search></header-search>
+    </div>
+   </div>
+    
+
+    <nav role="navigation">
+        <ul class="header-menu">
+            <li class="header-menu-item">
+                <a routerLink="/">
+                   <img src="assets/img/icons/home.svg" alt="home">
+                   <!-- <i data-feather="home"></i> -->
+                    <span>
+                        Home
+                    </span>
+                </a>
+            </li>
+            <li class="header-menu-item">
+                <a routerLink="/explore">
+                    <img src="assets/img/icons/noti.svg" alt="explore"> 
+                   
+                    <!-- <i data-feather="globe"></i> -->
+                    <span>
+                        Explore
+                    </span>
+                </a>
+            </li>
+            <li class="header-menu-item">
+                <a routerLink="/notifications">
+                    <img src="assets/img/icons/bell.svg" alt="notifications"> 
+                    <span>
+                        Notifications
+                    </span>
+                </a>
+            </li>
+            <li class="header-menu-item">
+                <a routerLink="/messages">
+                    <img src="assets/img/icons/chat.svg" alt="messages"> 
+                    <span>
+                        Messages
+                    </span>
+                </a>
+            </li>
+            <li class="header-menu-item">
+                <a routerLink="/profile">
+                    <img src="assets/img/icons/profile.svg" alt="profile"> 
+                    <span>
+                        Profile
+                    </span>
+                </a>
+            </li>
+            <li class="header-menu-item">
+                <a routerLink="/add-project">
+                    <img src="assets/img/icons/add.svg" alt="add project"> 
+                    <span>
+                        Add Project
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header-search-btn">
+        
+    </div>
+
+</div>

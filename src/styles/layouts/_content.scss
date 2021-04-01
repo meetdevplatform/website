@@ -15,3 +15,9 @@
 .auth-box{
     padding: 2rem 0;
 }
+
+.container{
+    &-primary{
+        padding: 0 8vw;
+    }
+}

@@ -1,0 +1,46 @@
+@import 'var';
+
+.header-search{
+    &-box{
+        position: relative;
+        width: 34vw;
+        max-width: 100%;
+
+        @include res(lg){
+            display: none;
+        }
+
+    }
+    &-icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        svg{
+            transition: $transition-primary;
+            color: $gray-400;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    &-input{
+        width: 100%;
+        transition: $transition-primary;
+        border-bottom: 1.4px solid $gray-400;
+        padding:1rem 0 1rem 3.6rem;
+        font-weight: 600;
+        &::-webkit-input-placeholder{
+            font-weight: 600;
+            color: $gray-400;
+        }
+        &:focus{
+            border-color: $color-primary;
+
+            & ~ .header-search-icon{
+                svg{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
