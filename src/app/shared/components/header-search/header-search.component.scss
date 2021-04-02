@@ -5,28 +5,82 @@
         position: relative;
         width: 34vw;
         max-width: 100%;
+        margin-left: 4vw;
 
         @include res(lg){
-            display: none;
+            padding: 0 4vw;
+            box-shadow: $shadow-xs;
+            margin-left: 0;
+            width: 100%;
+            height: 7rem;
+            display: flex;
+            align-items: center;
         }
-
+    }
+    &-btn{
+        z-index: 6000;
+        position: absolute;
+        right: 4vw;
+        top: 50%;
+        transform: translateY(-50%);
+        
     }
     &-icon{
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+        @include res(lg){
+            left: 4vw;
+        }
         svg{
             transition: $transition-primary;
-            color: $gray-400;
+            color: $gray-300;
             height: 2rem;
             width: 2rem;
+            @include res(lg){
+                height: 2.6rem;
+            width: 2.6rem;
+            }
+        }
+        &-mobile{
+            svg{
+                display: none;
+            height: 3.2rem;
+            width: 3.2rem;
+            color: $black;
+            }
+            svg.search{
+                @include res(md){
+                    display: block;
+                }
+            }
+            svg.close{
+                display: none;
+            }
+            
+        }
+    }
+    &-results{
+        display: none;
+        @include res(lg){
+            display: block;
+        }
+        height: calc(100vh - 7rem);
+        .placeholder{
+            height: 80%;
+            @include flex-center;
+            flex-direction: column;
+            img{
+                width: 65vw;
+                max-width: 40rem;
+            }
         }
     }
     &-input{
         width: 100%;
         transition: $transition-primary;
-        border-bottom: 1.4px solid $gray-400;
+        border-bottom: 1.4px solid $gray-300;
         padding:1rem 0 1rem 3.6rem;
         font-weight: 600;
         &::-webkit-input-placeholder{
@@ -39,6 +93,34 @@
             & ~ .header-search-icon{
                 svg{
                     color: $color-primary;
+                }
+            }
+        }
+
+        @include res(lg){
+            width:calc(100% - 4rem);
+        }
+    }
+  
+    &-wrapper{
+        z-index: 1500;
+        @include res(lg){
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: $white;
+            &.open{
+                display: block;
+                & ~ .header-search-btn{
+                    svg.search{
+                        display: none;
+                    }
+                    svg.close{
+                        display: block;
+                    }
                 }
             }
         }

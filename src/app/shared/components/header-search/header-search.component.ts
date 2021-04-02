@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UIFunctions } from '../../functions/ui-functions';
 
 @Component({
   selector: 'header-search',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ui: UIFunctions) { }
 
   ngOnInit(): void {
   }

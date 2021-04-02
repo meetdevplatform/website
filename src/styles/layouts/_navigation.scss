@@ -194,31 +194,3 @@
     }
   }
 
-/*
-  <div class="card card-navigation"
-  >
-     <nav class="menu-wrapper" role="navigation">
-      <ul class="menu-navigation" id="form-navigation" (click)="ui.toggleNavMenu('#form-navigation')">
-          <li class="menu-tab" (click)="goToOrg()" 
-          [class.active]="tab == 0"
-          [class.completed]="tab == 1"
-          >
-              <div class="icon">
-                  <i data-feather="check"></i>
-              </div>
-                  <span class="text">
-                      Organization Details
-                  </span>
-          </li>
-          <li class="menu-tab" (click)="goToInterest()"
-          [class.active]="tab == 1">
-              <div class="icon">
-                  <i data-feather="check"></i>
-              </div>
-                  <span class="text">
-                      Interests
-                  </span>
-          </li>
-      </ul>
-  </nav>
-  </div>*/

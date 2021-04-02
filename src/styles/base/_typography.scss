@@ -90,11 +90,9 @@ span{
 }
 }
 
-
-
 //text utils
-
 .text{
+    //colors
     &-gray{
         color: $gray-text;
     }
@@ -103,5 +101,12 @@ span{
     }
     &-tertiary{
         color: $color-tertiary;
+    }
+    //size
+    &-base{
+        @include base-fs;
+    }
+    &-small{
+        @include small-fs;
     }
 }

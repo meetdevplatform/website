@@ -8,6 +8,42 @@ declare var $: any;
 
 export class UIFunctions {
 
+   
+    initFeather() {
+        Feather.replace();
+    }
+
+    //close the mobile menu list when a option is clicked
+    toggleMobileMenu = function (el: any) {
+        $(el).closest("ul").toggleClass("open");
+        console.log($(el).closest("ul"));
+    }
+
+    //bug fix function to custom dropdown
+    onSelectChange(event: any) {
+        //console.log(event.target);
+    }
+
+    //open or close mobile menu list
+    toggleNavMenu(menu: any) {
+        $(menu).toggleClass('open');
+    }
+
+    //footer option
+    toggleOptionMenu(menu: any) {
+        document.querySelector(menu)?.classList.toggle('open');
+    }
+
+    //add event listner to close option list if it is opened by clicking anywhere on the document
+    addOptionEventListener(btn: any, menu: any) {
+        $(document).on('click', function (e: any) {
+            if ($(e.target).closest(btn).length === 0
+            ) {
+                document.querySelector(menu)?.classList.remove('open');
+            }
+        });
+    }
+
     changeTab = function (hash: any) {
         if (hash) {
             // find the link based on that hash
@@ -31,47 +67,8 @@ export class UIFunctions {
         anchor.closest("ul").removeClass("open");
     }
 
-    // pageLoadCorrectTab: function () {
-    //     this.changeTab(document.location.hash);
-    // },
-
-    toggleMobileMenu = function (el: any) {
-        $(el).closest("ul").toggleClass("open");
-        console.log($(el).closest("ul"));
-    }
-
-    selectHtml(wrapper: any) {
-        var wrapperRef = $(wrapper);
-        wrapperRef.on('change', 'select', function (event: any) {
-            var valueOuter = event.target.value;
-            console.log(valueOuter);
-            return valueOuter;
-        });
-    }
-
-    onSelectChange(event: any) {
-        //console.log(event.target);
-    }
-
-    initFeather() {
-        Feather.replace();
-    }
-
-    toggleNavMenu(menu: any) {
-        $(menu).toggleClass('open');
-    }
-
-    toggleOptionMenu(menu: any) {
-        document.querySelector(menu)?.classList.toggle('open');
-    }
-
-    addOptionEventListener(btn: any, menu: any) {
-        $(document).on('click', function (e: any) {
-            if ($(e.target).closest(btn).length === 0
-            ) {
-                document.querySelector(menu)?.classList.remove('open');
-            }
-        });
+    toggleMobileSearch(){
+        $('.header-search-wrapper').toggleClass("open");
     }
 
 }

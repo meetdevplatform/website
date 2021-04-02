@@ -1,7 +1,44 @@
-<div class="header-search-box">
-   
-    <input type="text" class="header-search-input" placeholder="Search projects, technologies, friends and colleges">
-    <div class="header-search-icon">
-        <i data-feather="search"></i>
+<div class="header-search-wrapper">
+    <div class="header-search-box">
+        <input type="text" class="header-search-input" placeholder="Search projects, technologies, friends and colleges">
+        <div class="header-search-icon">
+            <i data-feather="search"></i>
+        </div>
+    </div>
+
+    <div class="header-search-results">
+        <div class="placeholder p-4">
+            <img
+            sizes=" (min-width: 1200px) 0
+                    (max-width: 1200px) 25vw,
+                    (max-width: 800px) 45vw,
+                    (max-width: 576px) 60vw,
+                    999px"
+                    [defaultImage]="'assets/img/vectors/search_w_30.png'"
+                    [lazyLoad]="'
+                    assets/img/vectors/search_w_370.png 370w,
+                    assets/img/vectors/search_w_668.png 668w,
+                    assets/img/vectors/search.png 999w
+                    '" 
+                    [useSrcset]="true"
+                    alt="MeetDev search">
+           
+            <h4 class="mt-5">
+                Find what your are looking for.
+            </h4>
+
+            <p class="text-gray text-center mt-3">
+                Search for projects, category, friends and college and more
+            </p>
+        </div>
     </div>
 </div>
+
+<div class="header-search-btn">
+    <div class="header-search-icon-mobile" (click)="ui.toggleMobileSearch()">
+        <i data-feather="search" class="search"></i>
+        <i data-feather="x" class="close"></i>
+    </div>
+</div>
+
+
