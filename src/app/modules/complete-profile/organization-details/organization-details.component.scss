@@ -1,3 +1,5 @@
+@import 'var';
+    
 .content-wrapper{
-    background: linear-gradient(180deg, #F0F7FF 11.39%, #FFFFFF 85.83%);
+    @include gradient-genrator(var(--gr-start), var(--gr-end), bottom);
 }

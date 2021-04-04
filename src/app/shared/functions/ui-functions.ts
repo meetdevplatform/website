@@ -71,4 +71,17 @@ export class UIFunctions {
         $('.header-search-wrapper').toggleClass("open");
     }
 
+    toggleTheme(input:HTMLInputElement){
+        document.documentElement.classList.add('color-theme-in-transition')
+        if(input.checked){
+            document.documentElement.setAttribute('data-theme','dark');
+        }
+        else{
+            document.documentElement.setAttribute('data-theme','light');
+        }
+        window.setTimeout(function() {
+          document.documentElement.classList.remove('color-theme-in-transition')
+        }, 1000)
+      }
+
 }

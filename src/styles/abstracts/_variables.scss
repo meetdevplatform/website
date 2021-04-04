@@ -1,4 +1,3 @@
-
 //colors
 $white:#ffffff;
 $black:#000;
@@ -12,12 +11,12 @@ $color-primary-light:#E5F2FF;
 $color-secondary:#23374D;
 $color-tertiary:#4ECCA3;
 //grays
-$gray-bg:#FAFAFA;
-$gray-100:#e5e5e5;
-$gray-200:#DDDDDD;
+$gray-bg:#F5F5F5;
+$gray-100:#e5e5e5; 
+$gray-200:#DDDDDD; 
 $gray-300:#cccccc;
 $gray-400:#ABABAB;
-$gray-text:rgba($black,50%);
+$gray-text:rgb(127, 127, 127);
 $cubic-bounce:cubic-bezier(0,.14,.21,1.62);
 
 $transition-primary: 0.3s all ease-in;
@@ -30,3 +29,15 @@ $shadow-active: 0px 3px 20px 0px rgba(0,0,0,0.2);
 $shadow-light: 0px 3px 40px 0px rgba(0,0,0,0.1);
 $shadow-sm:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
 $shadow-xs:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+
+//dark mode colors
+$bg-dark:#222831;
+$color-primary-dark:#3c9cfd;
+$color-secondary-dark:#447099;
+$color-tertiary-dark:#48be97;
+$gray-text-dark:rgb(156, 156, 156);
+$gray-bg-dark:#111418; 
+$gray-100-dark:#343d4b;
+$gray-200-dark:#475466;
+$gray-300-dark:#555555;
+$color-primary-light-dark: #1b2027;

@@ -1,12 +1,12 @@
 *{
     @include base-fs;
     font-family: Aeonik;
+    color: var(--theme-text);
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: Met;
     font-weight: 600;
-    
 }
 
 label, input, textarea{
@@ -71,15 +71,15 @@ span{
 .link{
     &-primary{
         font-weight: 700;
-        color: $color-primary;
+        color: var(--theme-color-primary);
         &:hover{
-            color: $color-secondary;
+            color: var(--theme-color-secondary);
         } 
 }
 &-gray{
-    color: $gray-text;
+    color: var(--theme-gray-text);
     &:hover{
-        color: $color-primary;
+        color: var(--theme-color-primary);
     }
 }
 &-danger{
@@ -93,8 +93,15 @@ span{
 //text utils
 .text{
     //colors
+    &-primary{
+        color: var(--theme-color-primary) !important;
+    }
+    
+    &-secondary{
+        color: var(--theme-color-secondary) !important;
+    }
     &-gray{
-        color: $gray-text;
+        color: var(--theme-gray-text);
     }
     &-danger{
         color: $danger;

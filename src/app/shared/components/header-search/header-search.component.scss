@@ -35,11 +35,11 @@
         }
         svg{
             transition: $transition-primary;
-            color: $gray-300;
+            stroke: var(--theme-border-300);
             height: 2rem;
             width: 2rem;
             @include res(lg){
-                height: 2.6rem;
+            height: 2.6rem;
             width: 2.6rem;
             }
         }
@@ -48,7 +48,8 @@
                 display: none;
             height: 3.2rem;
             width: 3.2rem;
-            color: $black;
+            color: var(--theme-text);
+            filter: var(--theme-icon-filter);
             }
             svg.search{
                 @include res(md){
@@ -63,6 +64,7 @@
     }
     &-results{
         display: none;
+        background-color: var(--theme-bg-intermediate);
         @include res(lg){
             display: block;
         }
@@ -83,16 +85,17 @@
         border-bottom: 1.4px solid $gray-300;
         padding:1rem 0 1rem 3.6rem;
         font-weight: 600;
+        background-color:var(--theme-bg);;
         &::-webkit-input-placeholder{
             font-weight: 600;
             color: $gray-400;
         }
         &:focus{
-            border-color: $color-primary;
+            border-color: var(--theme-color-primary);
 
             & ~ .header-search-icon{
                 svg{
-                    color: $color-primary;
+                    stroke: var(--theme-color-primary);
                 }
             }
         }
@@ -111,7 +114,7 @@
             left: 0;
             height: 100vh;
             width: 100%;
-            background-color: $white;
+            background-color:  var(--theme-bg);
             &.open{
                 display: block;
                 & ~ .header-search-btn{

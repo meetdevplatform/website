@@ -1,8 +1,27 @@
+html{
+    --header-logo:url(/assets/img/logo.png);
+    @include res(lg){
+        --header-logo:url(/assets/img/logo_w_500.png);
+    }
+    @include res(sm){
+        --header-logo:url(/assets/img/logo_w_300.png);
+    }
+}
+[data-theme="dark"]{
+    --header-logo:url(/assets/img/logo-dark.png);
+    @include res(lg){
+        --header-logo:url(/assets/img/logo-dark_w_500.png);
+    }
+    @include res(sm){
+        --header-logo:url(/assets/img/logo-dark_w_300.png);
+    }
+}
+
 .header{
     padding:0 4vw;
     height: 7rem;
-    background-color: $white;
-    border-bottom: 1px solid $gray-100;
+    background-color: var(--theme-bg);
+    border-bottom: 1px solid var(--theme-border-100);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,16 +29,35 @@
     z-index: 500;
     &-center{
         @include flex-center;
+
+        .header-logo{
+            background-position: center;
+        }
     }
 
     &-logo{
         @include flex-center;
-        img{
             height: 3.2rem;
+            width: 20rem;
+            max-width: auto;
+            background-size: contain;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-image: var(--header-logo);
             @include res(lg){
                 height: 2.8rem;
-            }
         }
     }
 
+    // &-logo{
+    //     @include flex-center;
+    //     img{
+    //         height: 3.2rem;
+    //         @include res(lg){
+    //             height: 2.8rem;
+    //         }
+    //     }
+    // }
 }
+
+

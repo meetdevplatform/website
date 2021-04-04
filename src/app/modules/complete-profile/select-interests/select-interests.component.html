@@ -56,7 +56,7 @@
                 <div class="col-md-3 col-sm-4 col-6 d-flex w-100" *ngFor="let interest of interests; let i = index">
                     <div class="card card-border card-interest" id="{{'interest-'+i}}" (click)="toggleInterest(interest,i)">
                         <div class="check-box">
-                            <i data-feather="check"></i>
+                           <img src="assets/img/icons/check.svg" alt="">
                         </div>
                         <h6 class="text">
                             {{interest}}

@@ -1,7 +1,11 @@
 @import 'var';
 
+// .content-wrapper{
+//     background: linear-gradient(234.77deg, #F0F7FF 8.59%, #FFFFFF 55.66%);
+// }
+
 .content-wrapper{
-    background: linear-gradient(234.77deg, #F0F7FF 8.59%, #FFFFFF 55.66%);
+    @include gradient-genrator(var(--gr-start), var(--gr-end), bottom left)
 }
 
 .img-login{

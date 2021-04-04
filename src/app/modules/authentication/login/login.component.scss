@@ -1,7 +1,7 @@
 @import 'var';
 
 .content-wrapper{
-    background: linear-gradient(257.05deg, #F0F7FF 5.55%, #FFFFFF 91.62%);
+    @include gradient-genrator(var(--gr-start), var(--gr-end), bottom left)
 }
 
 .img-login{
@@ -10,7 +10,7 @@
     top: 50%;
     transform: translateY(-40%);
     width: 45vw;
-
+    
     @include res(md){
         position: relative;
        display: none;

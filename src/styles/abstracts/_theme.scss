@@ -1,0 +1,39 @@
+
+
+:root{
+    --theme-text: #{$black};
+    --theme-color-primary: #{$color-primary};
+    --theme-color-secondary: #{$color-primary};
+    --theme-color-tertiary: #{$color-tertiary};
+    --theme-gray-text:#{$gray-text};
+    --theme-bg: #{$white};
+    --theme-bg-secondary: #{$gray-bg};
+    --theme-bg-intermediate: #{$white};
+    --theme-border-100: #{$gray-100};
+    --theme-border-200: #{$gray-200};
+    --theme-border-300: #{$gray-300};
+    --theme-icon-filter : brightness(0);
+    --theme-banner-secondary: #{$color-secondary};
+    --hover-blue: #{$color-primary-light};
+    --gr-start:#F0F7FF;
+    --gr-end:#FFFFFF;
+}
+
+[data-theme = "dark"]{
+    --theme-text: #{$white};
+    --theme-color-primary: #{$color-primary-dark};
+    --theme-color-secondary: #{$color-secondary-dark};
+    --theme-color-tertiary: #{$color-tertiary-dark};
+    --theme-bg: #{$bg-dark};
+    --theme-gray-text:#{$gray-text-dark};
+    --theme-bg-secondary:#{$gray-bg-dark};
+    --theme-bg-intermediate: #{$gray-bg-dark};
+    --theme-border-100: #{$gray-100-dark};
+    --theme-border-200: #{$gray-200-dark};
+    --theme-border-300: #{$gray-300-dark};
+    --theme-icon-filter: brightness(0) invert(1);
+    --theme-banner-secondary: #{$bg-dark};
+    --hover-blue: #{$color-primary-light-dark};
+    --gr-start:#15212e;
+    --gr-end:#111418;
+}

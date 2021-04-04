@@ -65,7 +65,7 @@
   word-wrap: break-word;
   @include small-fs;
   font-weight: 600;
-  color: $gray-text;
+  color: var(--theme-gray-text);
   position: relative;
   z-index: 2;
 }
@@ -82,7 +82,7 @@
   right: -0.3em;
   top: -0.3em;
   float: right;
-  color: $gray-text;
+  color: var(--theme-gray-text);
 
   span{
     font-size: 3rem;

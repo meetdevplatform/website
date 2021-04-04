@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 html{
     font-size: 62.5%; //10px
     overflow-x: hidden;
@@ -38,6 +37,7 @@ button{
 input,select,textarea{
     outline: none !important;
     border: none;
+    background-color: var(--theme-bg-intermediate);
 }
 body{
     box-sizing: border-box;
@@ -55,3 +55,11 @@ section{
 }
 
 ul{list-style: none;}
+
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 150ms ease-out !important;
+  transition-delay: 0 !important;
+}

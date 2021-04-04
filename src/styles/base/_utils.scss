@@ -1,6 +1,6 @@
 
 .bg-gray{
-    background-color: $gray-bg;
+    background-color: var(--theme-bg-secondary);
 }
 
 .font-600{
@@ -12,20 +12,14 @@
 .font-700{
     font-weight: 700 !important;
 }
-.text-primary{
-    color: $color-primary !important;
-}
 
-.text-secondary{
-    color: $color-secondary !important;
-}
 
 .border{
     &-primary{
-        border-bottom: 1px solid $color-primary;
+        border-bottom: 1px solid var(--theme-color-primary);
     }
     &-gray-100{
-        border-bottom: 0.8px solid $gray-100;
+        border-bottom: 0.8px solid var(--theme-border-100);
     }
 }
 

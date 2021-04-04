@@ -13,8 +13,7 @@
     }
 
     &-secondary{
-        background-color: $color-secondary;
+        background-color: var(--theme-banner-secondary);
     }
-
 
 }

@@ -1,6 +1,6 @@
 
 .card{
-    background-color: $white;
+    background-color: var(--theme-bg);
     border-radius: 1rem;
     box-shadow: $shadow;
     padding: 3.6rem 3.2rem;
@@ -11,44 +11,42 @@
 
     &-border{
         box-shadow: none;
-        border: 1px solid $gray-100;
+        border: 1px solid var(--theme-border-100);
         padding: 1.5rem 2.5rem;
     }
 
     &-header{
-        border-bottom: 1px solid $gray-300;
+        border-bottom: 1px solid var(--theme-border-300);
         padding: 1rem 0;
         margin-bottom: 1rem;
     }
     &-link{
         cursor: pointer;
         text-align: center;
-        @include spinner($black,$color-primary,$white);
-
+        @include spinner(var(--theme-text),var(--theme-color-primary),var(--theme-bg));
          .link{
         transition: $transition-secondary;
          font-weight: 600;
-
-        color: $color-primary;
+        color: var(--theme-color-primary);
         }
 
         display: block;
         transition: $transition-secondary;
         &:hover{
-            background-color: $color-primary-light;
+            background-color: var(--hover-blue);
             box-shadow: $shadow-light;
             transform: translateY(-2px);
             .link{
-                 color: $color-secondary;
+                 color: var(--theme-color-secondary);
             }
         }
         &:focus{
-            box-shadow: 0 0 0 2px $gray-300;
+            box-shadow: 0 0 0 2px var(--theme-border-300);
         }
         &:active{
            box-shadow: none;
             transform: translateY(0);
-            background-color: $gray-100;
+            background-color: var(--theme-border-100);
         }
     }
     &-navigation{

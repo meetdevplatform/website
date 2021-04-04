@@ -34,16 +34,16 @@
     }
 
     &:hover{
-        @include btn-shadow($gray-100, 0.1);
-        background-color: lighten( $gray-100,5%);
-        border-color:$gray-200;
+        @include btn-shadow(var(--theme-border-100), 0.1);
+        background-color: rgba(var(--theme-border-100),50%);
+        border-color:var(--theme-border-100);
     }
 
     &.selected{
-        background-color: $color-tertiary;
-        border-color:$color-tertiary;
+        background-color: var(--theme-color-tertiary);
+        border-color:var(--theme-color-tertiary);
         padding-left: 4rem;
-        @include btn-shadow($color-tertiary, 0.5);
+        @include btn-shadow(var(--theme-color-tertiary), 0.5);
         .check-box{
             transform: translate(0,-50%) scale(1);
             opacity: 1;

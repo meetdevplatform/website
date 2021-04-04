@@ -1,6 +1,16 @@
+html{
+    --img-filter : none;
+}
+
+[data-theme = "dark"]{
+--img-filter: invert(1);
+}
 
 .img{
     &-abs{
         position: absolute;
+    }
+    &-theme-filter{
+        filter: var(--img-filter);
     }
 }

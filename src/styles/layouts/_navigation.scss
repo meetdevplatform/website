@@ -1,196 +1,138 @@
-.transformer-tabs {
-    position: relative;
-    ul{
-        position: relative;
+html {
+  --border: #{var(--theme-gray-text)};
+}
+[data-theme="dark"] {
+  --border: #{$black};
+}
+
+.navigation-mobile {
+  display: flex;
+  @include res(sm) {
+    display: none;
+    position: absolute;
+    box-shadow: $shadow;
+    background-color: var(--theme-bg-intermediate);
+    border-radius: 0.6rem;
+    max-width: 90vw;
+    width: 30rem;
+
+    &.open {
+      display: block;
     }
     li {
-      display: inline-block;
-      vertical-align: bottom;
-    }
-
-    a {
-      display: inline-block;
-      &.active {
-        border-bottom: 3px solid black;
-        position: relative;
-        bottom: -3px;
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--border);
       }
-    }
 
-    @include res(sm){
-        ul {
-            overflow: hidden;
-            height: 4rem;
-            &::after {
-                content: "more ☰";
-                position: absolute;
-                display: inline-flex;
-                align-items: center;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                z-index: 2;
-                font-size: 2rem;
-                font-family: 'Met';
-                pointer-events: none;
-                width: 8rem;
-                font-weight: 600;
-            }
-
-            &.open {
-                a {
-                  position: relative;
-                  display: block;
-                }
-              }
-          }
-
-          li {
-            display: block; /* One link per "row" */
-          }
-          a {
-            position: absolute; /* Stack links on top of each other */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            &.active {
-              border: 0;
-              z-index: 10; /* Active tab is on top */
-              background: $white;
-              color: $white;
-            }
-          }
+      padding: 1.5rem 1rem;
     }
   }
+}
 
-  .navigation-mobile{
-      display: flex;
-      @include res(sm){
-        display: none;
-        position: absolute;
-          box-shadow: $shadow;
-          background-color: $white;
-          border-radius: 0.6rem;
-          max-width: 90vw;
-          width: 30rem;
-  
-          &.open{
-              display: block;
-          }
-          li{
-              border-bottom: 1px solid $gray-100;
-              padding: 1.5rem 1rem;
-          }
-
-      }
-  }
-  
-  .menu{
-    &-navigation{
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      @include res(sm){
-        min-height: 6rem;
-        overflow: hidden;
-        cursor: pointer;
-        &::after {
-          content: "☰";
-          position: absolute;
-          display: inline-flex;
-          align-items: center;
-          top: 3rem;
-          right: 2rem;
-          transform: translateY(-50%);
-          z-index: 10;
-          font-size: 2rem;
-          pointer-events: none;
-          font-weight: 600;
-      }
-      }
-      &.open{
-        @include res(sm){
-          display: block;
-          overflow: visible;
-          &::after {
-            content: "";
-          }
-          .menu-tab{
-            position: relative;
-            padding: 1rem 1.6rem;
-            pointer-events: all;
-          }
-        }
-      }
-    }
-    &-tab{
+.menu {
+  &-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include res(sm) {
+      min-height: 6rem;
+      overflow: hidden;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      background-color: $white;
-      padding:0.8rem 1.6rem;
-      border-radius: 0.6rem;
-      @include res(sm){
+      &::after {
+        content: "☰";
         position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        top: 3rem;
+        right: 2rem;
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: 2rem;
         pointer-events: none;
-        transition: $transition-secondary;
-        transition-duration: 0.25s;
-      }
-      .icon{
-        height: 3rem;
-        width: 3rem;
-        padding: 0.4rem;
-        border-radius: 50%;
-        margin-right: 0.8rem;
-        @include flex-center;
-        border: 1px solid $gray-text;
-        svg{
-          stroke: $gray-text;
-        }
-      }
-      .text{
-        font-family: Met;
         font-weight: 600;
-        color: $gray-text;
       }
-
-      &.active{
-        background-color: $color-primary-light;
-        .text{
-          color: $black;
+    }
+    &.open {
+      @include res(sm) {
+        display: block;
+        overflow: visible;
+        &::after {
+          content: "";
         }
-        .icon{
-          border-color: $color-primary;
-          svg{
-            stroke: $color-primary
-          }
-        }
-
-        @include res(sm){
-          z-index: 5;
-        }
-      }
-
-      &.completed{
-        background-color: rgba($success,0.25);
-        color: $color-secondary;
-        .text{
-          color: $color-secondary;
-        }
-        .icon{
-          background-color: $color-tertiary;
-          border-color:  $color-tertiary;
-          svg{
-            stroke: $white;
-          }
+        .menu-tab {
+          position: relative;
+          padding: 1rem 1.6rem;
+          pointer-events: all;
         }
       }
     }
   }
+  &-tab {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--theme-bg-intermediate);
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.6rem;
+    @include res(sm) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      transition: $transition-secondary;
+      transition-duration: 0.25s;
+    }
+    .icon {
+      height: 3rem;
+      width: 3rem;
+      padding: 0.4rem;
+      border-radius: 50%;
+      margin-right: 0.8rem;
+      @include flex-center;
+      border: 1px solid var(--theme-gray-text);
+      svg {
+        stroke: var(--theme-gray-text);
+      }
+    }
+    .text {
+      font-family: Met;
+      font-weight: 600;
+      color: var(--theme-gray-text);
+    }
 
+    &.active {
+      background-color: var(--theme-color-primary);
+      .text {
+        color: $white;
+      }
+      .icon {
+        border-color: $white;
+        svg {
+          stroke:$white;
+        }
+      }
+
+      @include res(sm) {
+        z-index: 5;
+      }
+    }
+
+    &.completed {
+      background-color: rgba($success, 0.25);
+      color: var(--theme-color-secondary);
+      .text {
+        color: var(--theme-text);
+      }
+      .icon {
+        background-color: $color-tertiary;
+        border-color: $color-tertiary;
+        svg {
+          stroke: var(--theme-bg);
+        }
+      }
+    }
+  }
+}

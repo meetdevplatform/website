@@ -17,9 +17,9 @@ $arrow_color: $gray !default;
 // Style the dropdown
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: #fff;
+  background-color: var(--theme-bg-intermediate);
   border-radius: $input_border_radius;
-  border: solid 1px $gray_light; 
+  border: solid 1px var(--theme-border-200); 
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -115,7 +115,7 @@ $arrow_color: $gray !default;
   
   // List and options
   .list {
-    background-color: #fff;
+    background-color:var(--theme-bg-intermediate);;
     border-radius: $input_border_radius;
     box-shadow: $shadow-sm;
     box-sizing: border-box;
@@ -143,13 +143,13 @@ $arrow_color: $gray !default;
 
 /* Track */
 &::-webkit-scrollbar-track {
-  background: $gray-bg;
+  background: var(--theme-bg-intermediate);
   border-radius: 2rem;
 }
 
 /* Handle */
 &::-webkit-scrollbar-thumb {
-  background: $gray-200;
+  background:var(--theme-border-200);
   border-radius: 2rem;
 }
 
@@ -172,7 +172,7 @@ $arrow_color: $gray !default;
     font-family: Met !important;
     transition: all 0.2s;
     &:hover, &.focus, &.selected.focus { 
-      background-color: $gray_lighter;
+      background-color: var(--theme-border-100);
     }
     &.selected { 
       font-weight: bold;

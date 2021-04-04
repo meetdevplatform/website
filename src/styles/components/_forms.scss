@@ -1,14 +1,23 @@
+html{
+    --theme-label-color:#{$color-secondary};
+    --theme-input-color:#{$color-secondary};
+}
+[data-theme="dark"]{
+    --theme-label-color:#{$color-primary-light};
+    --theme-input-color:#{$white};
+}
+
+
 select{
     display: none;
 }
 .form{
     &-group{            
         margin-bottom: 1.5rem;
-        
     }
     &-label{
         @include small-fs;
-        color: $color-secondary;
+        color: var(--theme-label-color);
         font-weight: 500;
         margin-bottom: 0.4rem;
         display: block;
@@ -22,21 +31,21 @@ select{
         margin-top: 2rem;
     }
     &-input,&-select{
-        border: 1.8px solid $gray-200;
+        border: 1.8px solid var(--theme-border-200);
         padding: 1.6rem 1.6rem;
         border-radius: 0.8rem;
         &:focus{
-            border-color: $color-primary;
+            border-color:  var(--theme-color-primary);
         }
     }
     &-input{
         display: block;
         width: 100%;
-        color: $color-secondary;
+        color:var(--theme-input-color);
         transition: $transition-primary;
         &::-webkit-input-placeholder {
             font-weight: 500;
-            color: $gray-text;
+            color: var(--theme-gray-text);
           }
     }
     &-select{
@@ -52,7 +61,7 @@ select{
         content: "*";
         font-size: 2rem;
         font-weight: 600;
-        color: $color-primary;
+        color:var(--theme-color-primary);
     }
 }
 
