@@ -1,20 +1,20 @@
 <div class="header container-primary d-flex align-items-center justify-content-between">
-   <div class="header-left">
-    <div class="header-logo">
-       
+    <div class="header-left">
+        <div class="header-logo">
+
+        </div>
+
+        <div class="header-search">
+            <header-search></header-search>
+        </div>
     </div>
 
-    <div class="header-search">
-        <header-search></header-search>
-    </div>
-   </div>
-    
-    <nav role="navigation">
+    <nav role="navigation" class="d-flex align-items-center">
         <ul class="header-menu">
             <li class="header-menu-item">
                 <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                     true}">
-                   <img src="assets/img/icons/home.svg" alt="home">
+                    <img src="assets/img/icons/home.svg" alt="home">
                     <span>
                         Home
                     </span>
@@ -23,7 +23,7 @@
             <li class="header-menu-item">
                 <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                     true}">
-                    <img src="assets/img/icons/noti.svg" alt="explore"> 
+                    <img src="assets/img/icons/noti.svg" alt="explore">
                     <span>
                         Explore
                     </span>
@@ -32,7 +32,7 @@
             <li class="header-menu-item">
                 <a routerLink="/notifications" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                     true}">
-                    <img src="assets/img/icons/bell.svg" alt="notifications"> 
+                    <img src="assets/img/icons/bell.svg" alt="notifications">
                     <span>
                         Notifications
                     </span>
@@ -40,7 +40,7 @@
             </li>
             <li class="header-menu-item">
                 <a routerLink="/messages" routerLinkActive="active">
-                    <img src="assets/img/icons/chat.svg" alt="messages"> 
+                    <img src="assets/img/icons/chat.svg" alt="messages">
                     <span>
                         Messages
                     </span>
@@ -49,7 +49,7 @@
             <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}">
                 <a routerLink="/profile">
-                    <img src="assets/img/icons/profile.svg" alt="profile"> 
+                    <img src="assets/img/icons/profile.svg" alt="profile">
                     <span>
                         Profile
                     </span>
@@ -57,7 +57,7 @@
             </li>
             <li class="header-menu-item" routerLinkActive="active">
                 <a routerLink="/add-project">
-                    <img src="assets/img/icons/add.svg" alt="add project"> 
+                    <img src="assets/img/icons/add.svg" alt="add project">
                     <span>
                         Add Project
                     </span>
@@ -72,6 +72,9 @@
                 </a>
             </li>
         </ul>
+
+        <theme-toggler class="pl-4 theme-toggle"></theme-toggler>
+
     </nav>
 
     <nav role="navigation" class="header-mobile">
@@ -79,7 +82,7 @@
             <li class="header-menu-item">
                 <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                     true}">
-                   <img src="assets/img/icons/home.svg" alt="home">
+                    <img src="assets/img/icons/home.svg" alt="home">
                     <span>
                         Home
                     </span>
@@ -88,7 +91,7 @@
             <li class="header-menu-item">
                 <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                     true}">
-                    <img src="assets/img/icons/noti.svg" alt="explore"> 
+                    <img src="assets/img/icons/noti.svg" alt="explore">
                     <span>
                         Explore
                     </span>
@@ -97,16 +100,16 @@
             <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}">
                 <a routerLink="/add-project">
-                    <img src="assets/img/icons/add.svg" alt="add project"> 
+                    <img src="assets/img/icons/add.svg" alt="add project">
                     <span>
-                        Add 
+                        Add
                     </span>
                 </a>
             </li>
             <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}">
                 <a routerLink="/notifications">
-                    <img src="assets/img/icons/bell.svg" alt="notifications"> 
+                    <img src="assets/img/icons/bell.svg" alt="notifications">
                     <span>
                         Notifications
                     </span>
@@ -123,13 +126,13 @@
             <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}">
                 <a routerLink="/profile">
-                    <img src="assets/img/icons/profile.svg" alt="profile"> 
+                    <img src="assets/img/icons/profile.svg" alt="profile">
                     <span>
                         Profile
                     </span>
                 </a>
             </li>
-           
+
         </ul>
     </nav>
 

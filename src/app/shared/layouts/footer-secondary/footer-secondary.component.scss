@@ -1,0 +1,16 @@
+@import 'var';
+
+ul li {
+    @include flex-center;
+    a{
+        padding: 0 1rem;
+        display: block;
+    }
+} 
+
+.navigation-mobile{
+    @include res(sm){
+        bottom: 4rem;
+        right: 0;
+    }
+}

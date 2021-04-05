@@ -126,12 +126,11 @@ button.toast-close-button {
   width: 320px;
   max-width: 100%;
   border-radius: 0.6rem;
-  background-position: 15px center;
-  background-repeat: no-repeat;
-  background-size: 4rem;
+  //background-position: 15px center;
+  //background-repeat: no-repeat;
   box-shadow:$shadow-sm;
   transition: $transition-secondary;
-  color: $black;
+  color: var(--theme-text);
   //border: 1.5px solid $gray-100;
   animation: fade_up_big 0.25s $cubic-bounce forwards;
   cursor: pointer;
@@ -151,6 +150,19 @@ button.toast-close-button {
     border-radius: 50%;
     opacity: 0.35;
   }
+
+  &::after{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    width: 4rem;
+    filter: var(--theme-icon-filter);
+  }
 }
 .toast-container .ngx-toastr:hover {
   box-shadow: $shadow-light;
@@ -158,20 +170,21 @@ button.toast-close-button {
   
 }
 /* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/info-circle.svg */
-.toast-info {
+.toast-info::after {
   background-image: url("/assets/img/icons/info.svg");
-  
+ 
 }
 /* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/times-circle.svg */
-.toast-error {
+.toast-error::after {
   background-image:  url("/assets/img/icons/error.svg");
 }
 /* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/check.svg */
-.toast-success {
+.toast-success::after {
+ 
   background-image:  url("/assets/img/icons/success.svg");
 }
 /* https://github.com/FortAwesome/Font-Awesome-Pro/blob/master/advanced-options/raw-svg/regular/exclamation-triangle.svg */
-.toast-warning {
+.toast-warning::after {
   background-image:  url("/assets/img/icons/warning.svg");
 }
 .toast-container.toast-top-center .ngx-toastr,
@@ -187,7 +200,7 @@ button.toast-close-button {
   margin-right: auto;
 }
 .ngx-toastr {
-  background-color: $white;
+  background-color: var(--theme-bg);
   pointer-events: auto;
 }
 .toast-success {

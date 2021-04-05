@@ -12,7 +12,7 @@ export class UIFunctions {
     initFeather() {
         Feather.replace();
     }
-
+    isDark:Boolean = false;
     //close the mobile menu list when a option is clicked
     toggleMobileMenu = function (el: any) {
         $(el).closest("ul").toggleClass("open");
@@ -71,9 +71,9 @@ export class UIFunctions {
         $('.header-search-wrapper').toggleClass("open");
     }
 
-    toggleTheme(input:HTMLInputElement){
+    toggleTheme(){
         document.documentElement.classList.add('color-theme-in-transition')
-        if(input.checked){
+        if(this.isDark){
             document.documentElement.setAttribute('data-theme','dark');
         }
         else{
@@ -83,5 +83,4 @@ export class UIFunctions {
           document.documentElement.classList.remove('color-theme-in-transition')
         }, 1000)
       }
-
 }

@@ -1,5 +1,5 @@
 html {
-  --border: #{var(--theme-gray-text)};
+  --border: #{$gray-100};
 }
 [data-theme="dark"] {
   --border: #{$black};

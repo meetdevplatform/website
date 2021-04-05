@@ -23,7 +23,7 @@ button:disabled{
     @include res(sm){
         padding: 1.6rem 4rem;
     }
-    @include btn-focus(var(--theme-gray-text));
+    @include btn-focus(var(--theme-border-100));
     &:hover{
         transform: translateY(-2px);
     }
@@ -47,10 +47,10 @@ button:disabled{
             border-color: $gray-300;
             background-color: $gray-200;
         }
-        @include btn-focus($color-primary-light);
+        @include btn-focus(var(--hover-blue));
         &:active{
             color: $color-primary;
-            background-color: $color-primary-light;
+            background-color: var(--hover-blue);
         }
     }
     &-icon{
@@ -64,7 +64,7 @@ button:disabled{
     &-primary{
         color: $white;
         background-color: $color-primary;
-        @include btn-focus($color-primary);
+        @include btn-focus(var(--theme-color-primary));
          &:hover{
             background-color: darken($color-primary, 8%);
         }

@@ -26,7 +26,7 @@ export class VerifyEmailComponent implements OnInit {
 
   submit(){
     this.submitted = true;
-    if(this.form.valid){
+    if(this.form.valid && !this.sendingCode){
       this.btnLoading = true;
       setTimeout(()=>{
         this.btnLoading = false;
@@ -38,11 +38,14 @@ export class VerifyEmailComponent implements OnInit {
   }
 
   sendCode(){
-    this.sendingCode = true;
-    setTimeout(()=>{
-      this.sendingCode = false;
-    this.toastr.success("Your verification code is sent on your mail", "Code Sent");
-  },1000)
+    if(!this.btnLoading){
+      this.sendingCode = true;
+      setTimeout(()=>{
+        this.sendingCode = false;
+      this.toastr.success("Your verification code is sent on your mail", "Code Sent");
+    },1000)
+    }
+   
   }
 
 }

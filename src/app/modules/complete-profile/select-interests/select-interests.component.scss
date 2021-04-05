@@ -21,6 +21,9 @@
         left: 1.5rem;
         top: 50%;
         @include flex-center;
+        img{
+            width: 60%;
+        }
         height: 3rem;
         width: 3rem;
         @include res(sm){

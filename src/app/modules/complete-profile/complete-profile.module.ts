@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CompleteProfileComponent } from './complete-profile.component';
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderTertiaryComponent } from 'src/app/shared/components/header-tertiary/header-tertiary.component';
+import { HeaderSecondaryModule } from 'src/app/shared/layouts/header-secondary/header-secondary.module';
+import { FooterTertiaryModule } from 'src/app/shared/layouts/footer-tertiary/footer-tertiary.module';
 
 const routes: Routes = [
   {
@@ -31,9 +32,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CompleteProfileComponent,HeaderTertiaryComponent],
+  declarations: [CompleteProfileComponent],
   imports: [
     CommonModule,
+    HeaderSecondaryModule,
+    FooterTertiaryModule,
     RouterModule.forChild(routes)
   ]
 })
