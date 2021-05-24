@@ -15,8 +15,8 @@
             </div>
         </a>
  
-        <div class="dropdown project-more-dropdown">
-            <button class="btn-solo project-more dropdown-toggle"
+        <div class="dropdown project-more-dropdown project-more">
+            <button class="btn-solo dropdown-toggle"
             type="button"
             id="project_id"
             data-toggle="dropdown"
@@ -43,32 +43,38 @@
     </div>
 
     <div class="project-content">
-        <a class="project-content-top" routerLink="/">
+        <div class="project-content-top">
             <div class="d-flex mb-2">
-                <h4 class="flex-grow-1 mb-0">
-                    {{project.title}}
-                </h4>
-                <button class="btn-solo project-save" title="Save Project">
+                <a routerLink="/" class="flex-grow-1">
+                    <h4>
+                        {{project.title}}
+                    </h4>
+
+                    <p class="project-tagline">
+                        {{project.tag_line}}
+                    </p>
+                </a>
+               
+                <button class="btn-solo project-save flex-grow-1" title="Save Project">
                     <i data-feather="bookmark"></i>
                 </button>
+                
             </div>
     
-            <p class="project-tagline">
-                {{project.tag_line}}
-            </p>
-    
+           
+        </div>
     
             <div class="project-tags-box">
                 <a routerLink="tags/category" class="project-tag text-xs" *ngFor="let tag of project.tags">
                     {{tag}}
                 </a>
             </div>
-        </a>
+        
       
 
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-transparent btn-icon">
-                <i data-feather="eye" class="icon"></i>
+                <i data-feather="eye" class="icon project-icon"></i>
                 <h6 class="project-stat">
                     <span class="font-800"> {{project?.views}}</span>
                     <span class="text-gray text-400">
@@ -79,7 +85,7 @@
 
             <button class="btn-transparent btn-icon" title="Like">
                 <button class="btn-solo">
-                    <i data-feather="heart" ></i>
+                    <i data-feather="heart" class="project-icon"></i>
                 </button>
                 <h6 class="project-stat">
                     <span class="font-800">
@@ -94,7 +100,7 @@
 
       
     </div>
-    <a routerLink="/" class="project-view">
+    <a routerLink="/" class="btn-gray project-view">
         View project
     </a>
 </div>

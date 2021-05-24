@@ -16,6 +16,10 @@ owl-carousel-child.row{
   box-shadow: $shadow-active;
   background-color: var(--theme-bg);
   z-index: 20;
+
+  @media (hover: none) {
+    display: none;
+  }
   &.middle{
     top: 50%;
   }

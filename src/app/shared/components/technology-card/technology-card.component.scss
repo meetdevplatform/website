@@ -1,0 +1,44 @@
+@import 'var';
+
+.technology{
+    &-card{
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.8rem;
+        padding: 1rem;
+        @include flex-center;
+        min-height: 12rem;
+        border: 1px solid var(--theme-gray-100);
+        background: linear-gradient(to bottom right, var( --gr-gray-start), var( --gr-gray-end));
+        
+        &:hover{
+            .technology-name{
+                color: var(--theme-color-primary);
+            }
+        }
+        }
+
+    &-name{
+        z-index: 10;
+        transition: $transition-primary;
+    }
+
+   
+}
+
+.circle-abs{
+    &-top{
+        @include circle(15rem);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%,-45%);
+    }
+    &-bottom{
+        @include circle(7rem);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(50%,45%);
+    }
+}

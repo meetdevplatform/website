@@ -44,13 +44,12 @@
     background:linear-gradient(to $angle, $color-1, $color-2);
 }
 
-@mixin theme-css(){
-    @if $break-point == lg {
-        @media (max-width:74.99em) { // --1199.98px (large screens - eg. small laptops or landscape tablets) <1200
-            @content
-        };
-    }
+@mixin theme-css($themes...){
+@each $theme in $themes {
+      @content($theme);
+  }
 }
+
 
 @mixin circle($size) {
     min-height: $size;height: $size;

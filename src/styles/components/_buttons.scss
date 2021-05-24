@@ -66,8 +66,7 @@ button:disabled{
    
     &-solo{
         background-color: transparent;
-        height: 42px;
-        width: 42px;
+        @include circle(4.2rem);
         border-radius: 50%;
         @include flex-center;
         &:hover{
@@ -91,6 +90,16 @@ button:disabled{
     }
     &-secondary{
 
+    }
+    &-gray{
+        background-color: var(--theme-gray-100);
+        @include btn-focus(var(--theme-color-primary));
+        &:hover{
+            background-color: darken($color-primary, 8%);
+        }
+        &:active{
+            background-color: darken($color-primary,15%);
+        }
     }
     &-tertiary{
         color: $white;

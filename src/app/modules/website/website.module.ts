@@ -10,6 +10,8 @@ import { FooterSecondaryModule } from 'src/app/shared/layouts/footer-secondary/f
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ProjectCardModule } from 'src/app/shared/components/project-cards/project-card/project-card.module';
 import { ProfileCardModule } from 'src/app/shared/components/profile-cards/profile-card/profile-card.module';
+import { TechnologyCardModule } from 'src/app/shared/components/technology-card/technology-card.module';
+import { ProjectCardHorizontalModule } from 'src/app/shared/components/project-cards/project-card-horizontal/project-card-horizontal.module';
 
 @NgModule({
   declarations: [WebsiteComponent,HomeComponent],
@@ -22,6 +24,8 @@ import { ProfileCardModule } from 'src/app/shared/components/profile-cards/profi
     FooterSecondaryModule,
     LazyLoadImageModule,
     ProjectCardModule,
+    ProjectCardHorizontalModule,
+    TechnologyCardModule,
     WebsiteRoutingModule
   ]
 })

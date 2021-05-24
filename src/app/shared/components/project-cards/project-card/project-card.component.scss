@@ -1,2 +1,30 @@
 @import 'var';
 @import 'components/project-card';
+
+.project{
+    &-view{
+        width: 100%;
+        text-align: center;
+        padding: 1.8rem 1rem;
+        border-radius: 0;
+        display: block;
+        font-weight: 600;
+        @include large-fs;
+    }
+    &-img{
+        height: 20rem;
+        overflow: hidden;
+    }
+    &-top{
+        display: flex;
+        padding: 1.6rem 2rem;
+    }
+    &-content{
+        padding: 1.8rem 2rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-height: 25rem;
+    }
+   
+}

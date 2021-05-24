@@ -14,8 +14,6 @@
     --theme-icon-filter : brightness(0);
     --theme-banner-secondary: #{$color-secondary};
     --hover-blue: #{$color-primary-light};
-    --gr-start:#91abc9;
-    --gr-end:#FFFFFF;
 }
 
 [data-theme = "dark"]{
@@ -33,6 +31,21 @@
     --theme-icon-filter: brightness(0) invert(1);
     --theme-banner-secondary: #{$bg-dark};
     --hover-blue: #{$color-primary-light--dark};
+}
+
+
+//gradients
+
+:root{
+    --gr-start:#bbdbff;
+    --gr-end:#FFFFFF;
+    --gr-gray-start:rgb(239, 245, 255);
+    --gr-gray-end:#fff;
+}
+
+[data-theme="dark"]{
     --gr-start:#15212e;
     --gr-end:#111418;
+    --gr-gray-start:#15212e;
+    --gr-gray-end:#111418;
 }

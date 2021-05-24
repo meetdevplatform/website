@@ -18,12 +18,14 @@ html{
         min-width: 100%;
         object-fit: cover;
     }
+    &-flip{
+        transform: rotateY(180deg);    }
     &-top-center{
         object-position: top center;
     }
 }
 
-@mixin define-border ($border-color) {
+@mixin define-border ($border-color,$big-r:1.1) {
     &::after, &::before{
         content: "";
         height: 100%;
@@ -41,18 +43,28 @@ html{
     }
     &::before{
         opacity: 0.1;
-        transform: translate(-50%,-50%) scale(1.1);
+        transform: translate(-50%,-50%) scale($big-r);
     }
 }
 
 .img-border-primary{
     @include define-border(--theme-color-primary);
+
+    &-lg{
+        @include define-border(--theme-color-primary,1.3);
+    }
 }
 
 .img-border-gray{
     @include define-border(--theme-gray-text);
 }
+.img-border-tertiary{
+    @include define-border(--theme-color-tertiary);
 
+    &-md{
+        @include define-border(--theme-color-tertiary,1.2);
+    }
+}
 //profile images
 .profile-img{
     @include circle(15rem);
@@ -72,5 +84,5 @@ html{
 }
 
 .profile-img-small{
-    @include circle(4.2rem);
+    @include circle(4rem);
 }
