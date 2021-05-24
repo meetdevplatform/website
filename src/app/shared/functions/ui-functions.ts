@@ -83,4 +83,11 @@ export class UIFunctions {
           document.documentElement.classList.remove('color-theme-in-transition')
         }, 1000)
       }
+
+      owlNext(item:any) {
+        item.next([200]);
+      }
+      owlPrev(item:any) {
+        item.previous([200]);
+      }
 }

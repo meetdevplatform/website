@@ -12,14 +12,9 @@ declare var anime: any;
 export class AppComponent implements OnInit {
   title = 'meetdev';
 
-  constructor(private router: Router, public ui: UIFunctions) {
-
-  }
+  constructor(private router: Router, public ui: UIFunctions) {}
 
   themeComponent = new ThemeTogglerComponent(this.ui);
-
-  // @ViewChild(ThemeTogglerComponent)
-  // themeComponent!: ThemeTogglerComponent;
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {
@@ -28,17 +23,16 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0);
     });
-
-    console.log("App component - is Dark", this.ui.isDark);
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // dark mode
-      this.ui.isDark = true;
-    }
-    else {
-      this.ui.isDark = false;
-    }
-    this.ui.toggleTheme();
+          this.ui.isDark = true;
+        }
+        else {
+          this.ui.isDark = false;
+        }
+    console.log("App Init - is Dark", this.ui.isDark);
+   
 
+    this.ui.toggleTheme();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       this.ui.isDark = e.matches ? true : false;
       this.ui.toggleTheme();

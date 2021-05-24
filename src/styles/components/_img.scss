@@ -13,4 +13,64 @@ html{
     &-theme-filter{
         filter: var(--img-filter);
     }
+    &-fill{
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+    &-top-center{
+        object-position: top center;
+    }
+}
+
+@mixin define-border ($border-color) {
+    &::after, &::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: var($border-color);
+    }
+
+    &::after{
+        opacity: 0.25;
+        transform: translate(-50%,-50%) scale(1.05);
+    }
+    &::before{
+        opacity: 0.1;
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+}
+
+.img-border-primary{
+    @include define-border(--theme-color-primary);
+}
+
+.img-border-gray{
+    @include define-border(--theme-gray-text);
+}
+
+//profile images
+.profile-img{
+    @include circle(15rem);
+    border-radius: 50%;
+    position: relative;
+
+    img{
+        object-fit: cover;
+        object-position: top center;
+        height: 100%;
+        width:100%;
+        border-radius: 50%;
+        box-shadow:$shadow-sm;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.profile-img-small{
+    @include circle(4.2rem);
 }

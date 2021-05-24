@@ -3,6 +3,14 @@
     background-color: var(--theme-bg-secondary);
 }
 
+.bg-white-gray{
+    background-color: var(--theme-bg);
+}
+
+.bg-gray-100{
+    background-color: var(--theme-gray-100);
+}
+
 .font-600{
     font-weight: 600 !important;
 }
@@ -12,14 +20,16 @@
 .font-700{
     font-weight: 700 !important;
 }
-
+.font-800{
+    font-weight: 800 !important;
+}
 
 .border{
     &-primary{
         border-bottom: 1px solid var(--theme-color-primary);
     }
     &-gray-100{
-        border-bottom: 0.8px solid var(--theme-border-100);
+        border-bottom: 0.8px solid var(--theme-gray-100);
     }
 }
 

@@ -1,0 +1,16 @@
+@import 'var';
+
+.profile{
+    &-card{
+        text-align: center;
+        padding:0;
+        border-width: 1.4px;
+    }
+    &-img{
+        @include circle(12rem);
+        border: 2px solid var(--theme-color-primary);
+        box-shadow: $shadow-light-xl;
+    }
+
+
+}

@@ -1,60 +1,61 @@
-<footer class="footer footer-fixed">
-    <nav role="navigation">
-        <ul class="d-flex footer-primary-links">
-            <li>
-                <a class="pl-0">
-                    <theme-toggler></theme-toggler> 
-
-                </a>
-            </li>
-            <li>
-                <a routerLink="/explore" class="link-primary">
-                    explore projects
-                </a>
-            </li>
-            <li>
-                <a routerLink="/about" class="link-primary">
-                    about us
-                </a>
-            </li>
-           
-        </ul>
-    </nav>
-
-    <nav role="navigation" class="position-relative">
-        <ul class="footer-secondary-links navigation-mobile" id="footer-mobile-menu">
-            <li>
-                <a routerLink="/contact" class="link-gray">
-                    contact
-                </a>
-            </li>
-            <li>
-                <a routerLink="/faq" class="link-gray">
-                    faqs
-                </a>
-            </li>
-            <li>
-                <a routerLink="/terms-and-conditions" class="link-gray">
-                    terms and conditions
-                </a>
-            </li>
-            <!-- <li>
-                <a routerLink="/terms-and-conditions" class="link-gray d-flex align-items-center">
-                    <theme-toggler class="mr-3"></theme-toggler> 
-                    <span class="d-inline-block d-md-none">Change Theme</span>
-                </a>
-            </li> -->
-            <!-- <li>
-                <a routerLink="/terms-and-conditions" class="link-danger d-flex align-items-center font-weight-bold">
-                    <i data-feather="power" class="icon-sm text-danger mr-2"></i>
-                    logout
-                </a>
-            </li> -->
-        </ul>
-        <span class="font-weight-bold toggle-btn d-block d-md-none" id="footer-toggle"
-            (click)="ui.toggleOptionMenu('#footer-mobile-menu')">
-            more ☰
-        </span>
-    </nav>
-
-</footer>
+<div class="footer-wrapper">
+    <footer class="footer footer-fixed container-primary">
+        <nav role="navigation">
+            <ul class="d-flex footer-primary-links">
+                <li>
+                    <a class="pl-0">
+                        <theme-toggler></theme-toggler> 
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/explore" class="link-primary">
+                        explore projects
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/about" class="link-primary">
+                        about us
+                    </a>
+                </li>
+               
+            </ul>
+        </nav>
+    
+        <nav role="navigation" class="position-relative">
+            <ul class="footer-secondary-links navigation-mobile" id="footer-mobile-menu">
+                <li>
+                    <a routerLink="/contact" class="link-gray">
+                        contact
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/faq" class="link-gray">
+                        faqs
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/terms-and-conditions" class="link-gray">
+                        terms and conditions
+                    </a>
+                </li>
+                <!-- <li>
+                    <a routerLink="/terms-and-conditions" class="link-gray d-flex align-items-center">
+                        <theme-toggler class="mr-3"></theme-toggler> 
+                        <span class="d-inline-block d-md-none">Change Theme</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a routerLink="/terms-and-conditions" class="link-danger d-flex align-items-center font-weight-bold">
+                        <i data-feather="power" class="icon-sm text-danger mr-2"></i>
+                        logout
+                    </a>
+                </li> -->
+            </ul>
+            <span class="font-weight-bold toggle-btn d-block d-md-none" id="footer-toggle"
+                (click)="ui.toggleOptionMenu('#footer-mobile-menu')">
+                more ☰
+            </span>
+        </nav>
+    
+    </footer>
+</div>

@@ -36,14 +36,15 @@ export class ThemeTogglerComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log("Theme component - is Dark", this.ui.isDark);
+    console.log("Init Theme Switch - is Dark", this.ui.isDark);
     this.morphTo(anime.timeline({
       duration: 750,
       easing: "easeOutExpo"
     }), !this.ui.isDark);
+  }
 
-    document.getElementById('darkMode')?.addEventListener("click", () => {
-      const timeline = anime.timeline({
+  toggleSwitch(){
+  const timeline = anime.timeline({
         duration: 750,
         easing: "easeOutExpo"
       });
@@ -51,13 +52,11 @@ export class ThemeTogglerComponent implements OnInit {
       this.morphTo(timeline, this.ui.isDark);
       this.ui.isDark = !this.ui.isDark;
       this.ui.toggleTheme();
-    });
   }
 
 
   morphTo(timeline: any, toggler: any) {
-
-    console.log("toggle btn - existing theme is light - ", toggler);
+    console.log("Toggle Function - isDark ", !toggler);
 
     timeline
       .add({

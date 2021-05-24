@@ -1,0 +1,24 @@
+.tab{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.6rem;
+    box-shadow: $shadow-xs;
+    font-weight: 600;
+    font-family: Met;
+    line-height: 0;
+
+    &:not(:last-child){
+        margin-right: 0.8rem;
+    }
+    &-primary{
+        background-color: var(--theme-color-primary);
+        color:$white;
+
+        .icon{
+            margin-left: 0.6rem;
+                color: $white;
+        }
+    }
+}

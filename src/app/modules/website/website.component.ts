@@ -13,6 +13,7 @@ import {
   styleUrls: ['./website.component.scss']
 })
 export class WebsiteComponent implements OnInit {
+  
   showSecondary: Boolean = true;
   constructor(public router: Router) {
     this.checkForHeader();

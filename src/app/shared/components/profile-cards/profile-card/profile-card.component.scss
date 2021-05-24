@@ -1,0 +1,22 @@
+@import '../profile-card';
+
+.profile-card-top{
+    padding: 2rem 1.6rem;
+    position: relative;
+    border-bottom: 1.4px solid var(--theme-gray-100);
+    min-height: 27rem;
+}
+.profile-card-bottom{
+    padding: 1.2rem 1rem;
+    text-align: center;
+}
+
+.profile-follow{
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+
+    button{
+        border: 1.2px solid var(--theme-gray-100);
+    }
+}

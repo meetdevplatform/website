@@ -1,0 +1,19 @@
+@import 'var';
+@import 'components/banners';
+
+.profile-sidebar{
+    width: 26vw;
+    position: fixed;
+    top: 10rem;
+    right: 4vw;
+    @media (min-width: 1700px){
+       // right: calc(25vw + 4rem);
+        width: 45rem;
+    }
+    @include res(lg){
+        width: 28vw;
+    }
+    @include res(md){
+        display: none;
+    }
+}

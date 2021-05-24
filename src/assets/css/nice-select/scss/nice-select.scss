@@ -19,7 +19,7 @@ $arrow_color: $gray !default;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: var(--theme-bg-intermediate);
   border-radius: $input_border_radius;
-  border: solid 1px var(--theme-border-200); 
+  border: solid 1px var(--theme-gray-200); 
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
@@ -149,7 +149,7 @@ $arrow_color: $gray !default;
 
 /* Handle */
 &::-webkit-scrollbar-thumb {
-  background:var(--theme-border-200);
+  background:var(--theme-gray-200);
   border-radius: 2rem;
 }
 
@@ -172,7 +172,7 @@ $arrow_color: $gray !default;
     font-family: Met !important;
     transition: all 0.2s;
     &:hover, &.focus, &.selected.focus { 
-      background-color: var(--theme-border-100);
+      background-color: var(--theme-gray-100);
     }
     &.selected { 
       font-weight: bold;

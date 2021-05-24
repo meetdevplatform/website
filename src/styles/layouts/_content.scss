@@ -1,7 +1,4 @@
 .content{
-    &-wrapper{
-        //padding: 7rem 0;
-    }
     &-auth{
         min-height: 100vh;
         padding: 9rem 0 12rem;
@@ -10,8 +7,7 @@
             padding: 11rem 0;
         }
     }
-    &-container{
-        padding: 9rem 0;
+    &-wrapper{
         min-height: 100vh;
     }
     
@@ -22,6 +18,15 @@
 
 .container{
     &-primary{
-        padding: 0 8vw;
+        padding: 0 4vw;
+        margin:auto;
+        max-width: 1920px;
+
+        @media (min-width: 1700px){
+            padding: 0 4rem;
+        }
+    }
+    &-padding{
+        padding: 10rem 0;
     }
 }

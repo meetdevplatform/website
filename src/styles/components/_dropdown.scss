@@ -1,0 +1,33 @@
+//overriding bootstrap dropdown styles
+.dropdown{
+    cursor: pointer;
+    &-toggle{
+        &::after{
+            display: none;
+        }
+    }
+
+    &-item{
+        font-size: 1.4rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: var(--theme-text);
+        svg{
+           height: 1.4rem;
+           width: 1.4rem;
+           margin-right: 1rem;
+        }
+        &:active, &:hover{
+            background-color: var(--theme-bg);
+            color: var(--theme-text);
+        }
+    }
+    &-menu{
+        border-radius: 0.8rem;
+        border: none;
+        background-color: var(--theme-bg-intermediate);
+        box-shadow: $shadow;
+      //  animation: fade_in 0.15s ease-in-out forwards;
+    }
+}

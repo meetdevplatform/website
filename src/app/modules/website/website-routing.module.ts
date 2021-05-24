@@ -24,6 +24,10 @@ const routes: Routes = [
         path:'signup',
         loadChildren: () => import('../../modules/authentication/signup/signup.module').then(m => m.SignupModule)
       },
+      {
+        path:'profile/edit',
+        loadChildren: () => import('./pages/profile-form/profile-form.module').then(m => m.ProfileFormModule)
+      },
     ]
   },
   

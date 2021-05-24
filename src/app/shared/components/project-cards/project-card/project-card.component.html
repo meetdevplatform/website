@@ -1,0 +1,100 @@
+<div class="project-card">
+    <div class="project-top">
+        <a routerLink="/username" class="project-user">
+            <div class="profile-img img-border-gray profile-img-small mr-4">
+                <img [src]="project.owner_img" alt="owner">
+            </div>
+            <div>
+                <h6 class="mb-1">
+                    {{project.owner}}
+                </h6>
+
+                <p class="text-xs text-gray">
+                    Acropolis Institute of Technology & Research
+                </p>
+            </div>
+        </a>
+ 
+        <div class="dropdown project-more-dropdown">
+            <button class="btn-solo project-more dropdown-toggle"
+            type="button"
+            id="project_id"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >
+                <i data-feather="more-vertical" ></i>
+            </button>
+              <div class="dropdown-menu dropdown-menu-right" attr.aria-labelledby="project_id">
+                <a class="dropdown-item project-more-item">
+                  <i data-feather="share-2"></i>
+                  Share Project
+                </a>
+                <a class="dropdown-item project-more-item">
+                    <i data-feather="alert-triangle"></i>
+                    Report Project
+                  </a>
+              </div>
+          </div>
+  
+    </div>
+    <div class="project-img">
+        <img [src]="project?.thumbnail_image" [alt]="project?.title">
+    </div>
+
+    <div class="project-content">
+        <a class="project-content-top" routerLink="/">
+            <div class="d-flex mb-2">
+                <h4 class="flex-grow-1 mb-0">
+                    {{project.title}}
+                </h4>
+                <button class="btn-solo project-save" title="Save Project">
+                    <i data-feather="bookmark"></i>
+                </button>
+            </div>
+    
+            <p class="project-tagline">
+                {{project.tag_line}}
+            </p>
+    
+    
+            <div class="project-tags-box">
+                <a routerLink="tags/category" class="project-tag text-xs" *ngFor="let tag of project.tags">
+                    {{tag}}
+                </a>
+            </div>
+        </a>
+      
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-transparent btn-icon">
+                <i data-feather="eye" class="icon"></i>
+                <h6 class="project-stat">
+                    <span class="font-800"> {{project?.views}}</span>
+                    <span class="text-gray text-400">
+                        views
+                    </span>
+                </h6>
+            </div>
+
+            <button class="btn-transparent btn-icon" title="Like">
+                <button class="btn-solo">
+                    <i data-feather="heart" ></i>
+                </button>
+                <h6 class="project-stat">
+                    <span class="font-800">
+                        {{project?.like_count}}
+                    </span>
+                    <span class="text-gray text-400">
+                        likes
+                    </span>
+                </h6>
+            </button>
+        </div>
+
+      
+    </div>
+    <a routerLink="/" class="project-view">
+        View project
+    </a>
+</div>

@@ -1,139 +1,141 @@
-<div class="header container-primary d-flex align-items-center justify-content-between">
-    <div class="header-left">
-        <div class="header-logo">
-
+<div class="header-wrapper">
+    <div class="header h-100 d-flex align-items-center justify-content-between container-primary">
+        <div class="header-left">
+            <div class="header-logo">
+    
+            </div>
+    
+            <div class="header-search">
+                <header-search></header-search>
+            </div>
         </div>
-
-        <div class="header-search">
-            <header-search></header-search>
-        </div>
+    
+        <nav role="navigation" class="d-flex align-items-center">
+            <ul class="header-menu">
+                <li class="header-menu-item">
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">
+                        <img src="assets/img/icons/home.svg" alt="home">
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">
+                        <img src="assets/img/icons/noti.svg" alt="explore">
+                        <span>
+                            Explore
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a routerLink="/notifications" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">
+                        <img src="assets/img/icons/bell.svg" alt="notifications">
+                        <span>
+                            Notifications
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a routerLink="/messages" routerLinkActive="active">
+                        <img src="assets/img/icons/chat.svg" alt="messages">
+                        <span>
+                            Messages
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                    true}">
+                    <a routerLink="/profile">
+                        <img src="assets/img/icons/profile.svg" alt="profile">
+                        <span>
+                            Profile
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item" routerLinkActive="active">
+                    <a routerLink="/add-project">
+                        <img src="assets/img/icons/add.svg" alt="add project">
+                        <span>
+                            Add Project
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item d-none d-lg-block d-xl-none">
+                    <a routerLink="/add-project" (click)="ui.toggleMobileSearch()">
+                        <i data-feather="search"></i>
+                        <span>
+                            Search
+                        </span>
+                    </a>
+                </li>
+            </ul>
+    
+            <theme-toggler class="pl-4 theme-toggle"></theme-toggler>
+    
+        </nav>
+    
+        <nav role="navigation" class="header-mobile">
+            <ul class="header-menu header-menu-mobile">
+                <li class="header-menu-item">
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">
+                        <img src="assets/img/icons/home.svg" alt="home">
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">
+                        <img src="assets/img/icons/noti.svg" alt="explore">
+                        <span>
+                            Explore
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                    true}">
+                    <a routerLink="/add-project">
+                        <img src="assets/img/icons/add.svg" alt="add project">
+                        <span>
+                            Add
+                        </span>
+                    </a>
+                </li>
+                <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                    true}">
+                    <a routerLink="/notifications">
+                        <img src="assets/img/icons/bell.svg" alt="notifications">
+                        <span>
+                            Notifications
+                        </span>
+                    </a>
+                </li>
+                <!-- <li class="header-menu-item">
+                    <a routerLink="/messages">
+                        <img src="assets/img/icons/chat.svg" alt="messages"> 
+                        <span>
+                            Messages
+                        </span>
+                    </a>
+                </li> -->
+                <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                    true}">
+                    <a routerLink="/profile">
+                        <img src="assets/img/icons/profile.svg" alt="profile">
+                        <span>
+                            Profile
+                        </span>
+                    </a>
+                </li>
+    
+            </ul>
+        </nav>
+    
     </div>
-
-    <nav role="navigation" class="d-flex align-items-center">
-        <ul class="header-menu">
-            <li class="header-menu-item">
-                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                    true}">
-                    <img src="assets/img/icons/home.svg" alt="home">
-                    <span>
-                        Home
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item">
-                <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                    true}">
-                    <img src="assets/img/icons/noti.svg" alt="explore">
-                    <span>
-                        Explore
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item">
-                <a routerLink="/notifications" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                    true}">
-                    <img src="assets/img/icons/bell.svg" alt="notifications">
-                    <span>
-                        Notifications
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item">
-                <a routerLink="/messages" routerLinkActive="active">
-                    <img src="assets/img/icons/chat.svg" alt="messages">
-                    <span>
-                        Messages
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                true}">
-                <a routerLink="/profile">
-                    <img src="assets/img/icons/profile.svg" alt="profile">
-                    <span>
-                        Profile
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item" routerLinkActive="active">
-                <a routerLink="/add-project">
-                    <img src="assets/img/icons/add.svg" alt="add project">
-                    <span>
-                        Add Project
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item d-none d-lg-block d-xl-none">
-                <a routerLink="/add-project" (click)="ui.toggleMobileSearch()">
-                    <i data-feather="search"></i>
-                    <span>
-                        Search
-                    </span>
-                </a>
-            </li>
-        </ul>
-
-        <theme-toggler class="pl-4 theme-toggle"></theme-toggler>
-
-    </nav>
-
-    <nav role="navigation" class="header-mobile">
-        <ul class="header-menu header-menu-mobile">
-            <li class="header-menu-item">
-                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                    true}">
-                    <img src="assets/img/icons/home.svg" alt="home">
-                    <span>
-                        Home
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item">
-                <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                    true}">
-                    <img src="assets/img/icons/noti.svg" alt="explore">
-                    <span>
-                        Explore
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                true}">
-                <a routerLink="/add-project">
-                    <img src="assets/img/icons/add.svg" alt="add project">
-                    <span>
-                        Add
-                    </span>
-                </a>
-            </li>
-            <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                true}">
-                <a routerLink="/notifications">
-                    <img src="assets/img/icons/bell.svg" alt="notifications">
-                    <span>
-                        Notifications
-                    </span>
-                </a>
-            </li>
-            <!-- <li class="header-menu-item">
-                <a routerLink="/messages">
-                    <img src="assets/img/icons/chat.svg" alt="messages"> 
-                    <span>
-                        Messages
-                    </span>
-                </a>
-            </li> -->
-            <li class="header-menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                true}">
-                <a routerLink="/profile">
-                    <img src="assets/img/icons/profile.svg" alt="profile">
-                    <span>
-                        Profile
-                    </span>
-                </a>
-            </li>
-
-        </ul>
-    </nav>
-
 </div>

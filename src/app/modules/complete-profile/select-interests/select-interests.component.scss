@@ -37,9 +37,9 @@
     }
 
     &:hover{
-        @include btn-shadow(var(--theme-border-100), 0.1);
-        background-color: rgba(var(--theme-border-100),50%);
-        border-color:var(--theme-border-100);
+        @include btn-shadow(var(--theme-gray-100), 0.1);
+        background-color: rgba(var(--theme-gray-100),50%);
+        border-color:var(--theme-gray-100);
     }
 
     &.selected{

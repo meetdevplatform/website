@@ -1,0 +1,68 @@
+<div class="container">
+        <div class="border-primary py-3">
+            <h4 class="text-primary font-700 text-md-left text-center mb-2">
+                Complete Your Profile
+            </h4>
+        </div>
+
+
+        <section class="form-wrapper form-dark">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="username" class="form-label required">Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your name">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="bio" class="form-label required">Bio</label>
+                                <textarea type="text" name="bio" class="form-input" placeholder="Write something about yourelf" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="location" class="form-label required">Where you live</label>
+                                <input type="text" class="form-input" placeholder="Start typing your city name">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="location" class="form-label required">Interested in</label>
+                                <input type="text" class="form-input" placeholder="Start typing your city name">
+                            </div>
+
+                            <div class="interests">
+                                <div class="tab tab-primary" *ngFor="let control of skills">
+                                    Tab 1
+                                    <i data-feather="x" class="icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group form-select-wrapper">
+                                <label for="role" class="form-label required">Who you are ?</label>
+                                <select 
+                                class="form-select wide"
+                                nice-select (change)="ui.onSelectChange($event)">
+                                <option value="null" disabled>Roles available</option>
+                                <option value="0">Student</option>
+                                <option value="1">Working Professional</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+</div>
+    
+
+
+
+

@@ -1,0 +1,40 @@
+<div class="card card-border profile-card">
+    <div class="profile-card-top">
+
+        <div class="profile-follow">
+            <button class="btn-solo" title="{{'Follow ' + profile.full_name}}">
+                <i data-feather="plus"></i>
+            </button>
+
+        </div>
+
+        <div class="profile-img mx-auto mb-4">
+            <img class="img-fill img-top-center" [src]="profile.profile_picture" [alt]="profile.full_name">
+        </div>
+
+        <h5 class="mb-1 mt-2">{{profile.full_name}}</h5>
+
+        <p class="text-sm mb-2">
+            <span *ngIf="profile.is_college_student">
+                Student
+            </span>
+            <span *ngIf="!profile.is_college_student">
+                Working Professional
+            </span>
+            , <span class="text-tertiary font-700">45 DevCoins</span>
+        </p>
+
+        <p class="text-xs text-gray mt-2" *ngIf="profile.is_college_student">
+            {{profile?.college}}
+        </p>
+        <p class="text-xs text-gray mt-2" *ngIf="!profile.is_college_student">
+            {{profile?.institution}}
+        </p>
+    </div>
+   <div class="profile-card-bottom">
+       <a [routerLink]="['/', profile.username]" class="btn btn-primary btn-sm text-base font-500">
+
+           View Profile
+       </a>
+   </div>
+</div>

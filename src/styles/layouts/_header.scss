@@ -18,18 +18,7 @@ html{
 }
 
 .header{
-    padding:0 4vw;
-    height: 7rem;
-    background-color: var(--theme-bg);
-    border-bottom: 1px solid var(--theme-border-100);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 500;
     &-center{
-        @include flex-center;
-
         .header-logo{
             background-position: center;
         }
@@ -38,7 +27,7 @@ html{
     &-logo{
         @include flex-center;
             height: 3.2rem;
-            width: 20rem;
+            width: 16rem;
             max-width: auto;
             background-size: contain;
             background-position: left;
@@ -58,6 +47,16 @@ html{
     //         }
     //     }
     // }
+    &-wrapper{
+        height: 6.5rem;
+        background-color: var(--theme-bg);
+        border-bottom: 1px solid var(--theme-gray-100);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 500;
+    }
 }
 
 

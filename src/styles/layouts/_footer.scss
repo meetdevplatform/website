@@ -1,15 +1,17 @@
 .footer{
-        background-color: var(--theme-bg);
-        border-top: 1px solid var(--theme-border-100);
-        padding: 2rem 4vw;
-
         &-fixed{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+               
+        }
+        &-wrapper{
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 width: 100%;
+                background-color: var(--theme-bg);
+                border-top: 1px solid var(--theme-gray-100);
+                padding: 2rem 0;
         }
 }

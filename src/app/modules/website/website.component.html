@@ -1,4 +1,8 @@
+<div class="content-dev">
 <header-primary *ngIf="!showSecondary"></header-primary>
 <header-secondary *ngIf="showSecondary"></header-secondary>
-<router-outlet></router-outlet>
+<div class="bg-gray content-wrapper">
+        <router-outlet></router-outlet>
+</div>
 <footer-secondary *ngIf="showSecondary"></footer-secondary>
+</div>

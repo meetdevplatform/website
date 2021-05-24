@@ -1,3 +1,142 @@
-<section class="bg-gray content-container">
+<div class="container-padding">
+    <div class="container-primary">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="banner banner-secondary">
+                    <div class="row justify-content-between align-items-end">
+                    <div class="col-md-8 align-self-start">
+                        <div class="banner-content">
+                            <h3 class="text-white">
+                                <span class="text-primary">Hi Username,</span>
+                                welcome to MeetDev.
+                            </h3>
 
-</section>
+
+                            <p class="text-white">
+                                Join the community of developers like you sharing their journey of learning and growth.
+                                <br>
+                                Start sharing your journey by posting your first developement 
+                                <span class="font-700 text-white"> project. </span> 
+                            </p>
+
+                            <a routerLink="/add-project" class="btn btn-primary mt-5 btn-sm">
+                            Add your first project</a>
+                        </div>
+                    </div> 
+            </div>
+                </div>
+
+                <div class="projects-section">
+                    <section class="projects-for-you">
+                        <h3 class="mb-5">
+                            Projects for you
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-sm-6" *ngFor="let project of projectsForYou">
+                                <project-card [project]=project></project-card>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="interested-technologies pt-0">
+                        <h3 class="mb-5">
+                            Developers you may know
+                        </h3>
+
+                        <owl-carousel
+                        #profileCarouselEl
+                        [options]="profileCarousel"
+                        [carouselClasses]="['owl-theme', 'row', 'sliding']"
+                      >
+                        <div class="item" *ngFor="let profile of similarProfiles">
+                          <profile-card
+                          [profile]=profile
+                          ></profile-card>
+                        </div>
+                      </owl-carousel>
+
+                      <div class="owl-btn-div">
+                          <button 
+                          (click)="ui.owlPrev(profileCarouselEl)"
+                          class="owl-btn owl-btn-prev
+                          btn-solo middle">
+                            <i data-feather="chevron-left"></i>
+                          </button>
+                          <button
+                          (click)="ui.owlNext(profileCarouselEl)"
+                          class="owl-btn owl-btn-next
+                          btn-solo middle">
+                            <i data-feather="chevron-right"></i>
+                          </button>
+                      </div>
+
+                    </section>
+
+                    <section class="projects-for-you pt-0">
+                        <div class="row">
+                            <div class="col-sm-6" *ngFor="let project of projectsForYou">
+                                <project-card [project]=project></project-card>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="profile-sidebar">
+                    <div class="card card-border pt-5">
+                        <div class="img-border-primary profile-img mx-auto mb-5">
+                            <img src="https://images.pexels.com/photos/3466163/pexels-photo-3466163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Username">
+                        </div>
+    
+                        <div class="profile-content">
+                            <div class="text-center mt-4 mb-3">
+                                <h3 class="mb-4">
+                                    Mandeep Baghel
+                                </h3>
+        
+                                <h5>Student, 
+                                <span class="text-primary">
+                                    Computer Science
+                                </span>
+                            </h5>
+        
+                                <p>
+                                    Acropolis Institute of Technology and Research
+                                </p>
+                            </div>
+    
+                            <div class="bg-gray-100 rounded-lg p-4 text-center my-3">
+                                <h6>
+                                    <span class="text-primary">💻 0 Projects</span>  · <span class="text-tertiary">💰 0 DevCoins</span> 
+                                </h6>
+                            </div>
+    
+                            <p class="text-gray text-center">
+                                Earn your first <span class="text-tertiary">DevCoins</span>  by  completing your profile or uploading your first project!
+                            </p>
+    
+                            <div class="row my-4 no-gutters">
+                                <div class="col-6 pr-1">
+                                    <a routerLink="/add-project" class="btn btn-sm btn-primary w-100">Add Project</a>
+                                </div>
+                                <div class="col-6 pl-1">
+                                    <a routerLink="/profile/edit" class="btn btn-sm btn-tertiary w-100">Complete profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="other-links d-flex justify-content-between mt-4">
+                        <a routerLink="/about" class="text-sm link-gray mr-2">about</a>
+                        <a routerLink="/about" class="text-sm link-gray mr-2">contact</a>
+                        <a routerLink="/about" class="text-sm link-gray mr-2">FAQs</a>
+                        <a routerLink="/about" class="text-sm link-gray mr-2">terms & conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

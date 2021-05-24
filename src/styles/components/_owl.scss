@@ -1,0 +1,36 @@
+ .owl-stage {
+  padding-left: 0rem !important;
+
+ 
+}
+
+owl-carousel-child.row{
+  margin: 0 !important;
+}
+
+
+
+.owl-btn{
+  position: absolute;
+  border: 1px solid var(--theme-gray-100);
+  box-shadow: $shadow-active;
+  background-color: var(--theme-bg);
+  z-index: 20;
+  &.middle{
+    top: 50%;
+  }
+  &-prev{
+    left: 0;
+    &.middle{
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-next{
+    right: 0;
+    &.middle{
+      transform: translate(50%, -50%);
+    }
+  }
+
+}
+

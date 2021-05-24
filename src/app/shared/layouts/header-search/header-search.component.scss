@@ -4,14 +4,16 @@
     &-box{
         position: relative;
         width: 34vw;
-        max-width: 100%;
-        margin-left: 4vw;
-
+        margin-left: 2vw;
+        max-width: 50rem;
         @media screen and (max-width:1400px) {
             width: 32vw;
         }
         @media screen and (max-width:1350px) {
             width: 28vw;
+        }
+        @media (min-width: 1500px){
+            margin-left: 3rem;
         }
 
         @include res(lg){
@@ -42,7 +44,7 @@
         }
         svg{
             transition: $transition-primary;
-            stroke: var(--theme-border-300);
+            stroke: var(--theme-gray-300);
             height: 2rem;
             width: 2rem;
             @include res(lg){
