@@ -85,27 +85,31 @@
 }   
 }
 @mixin small-fs { //appx 14px - 12px
-    font-size: 1.4rem;
+    font-size: 1.4rem; //14
 
     @include res(md){
-        font-size: 1.5rem;
+        font-size: 1.55rem; //14
     }
     @include res(sm){
-        font-size: 1.62rem;
+        font-size: 1.62rem; //13
     }
     @include res(xxs){
-        font-size: 1.71rem;
+        font-size: 1.85rem; //13
 }   
 }
 
 @mixin xs-fs { //appx 12px - 10px
-    font-size: 1.25rem;
+    font-size: 1.25rem; //12.5
 
     @include res(md){
-        font-size: 1.22rem;
+        font-size: 1.33rem; //12
     }
 
     @include res(sm){
-        font-size: 1.25rem;
+        font-size: 1.37rem; //11
+    }
+
+    @include res(xxs){
+        font-size: 1.5rem; //11
     }
 }
