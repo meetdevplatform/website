@@ -36,7 +36,7 @@ h1{
 }
 
 h2{
-    font-size: 3.4rem;
+    font-size: 3.6rem;
     margin-bottom: 2rem;
     letter-spacing: -0.08rem;
 }
@@ -115,6 +115,18 @@ span{
     &-tertiary{
         color: $color-tertiary;
     }
+    &-600{
+        font-weight: 600 !important;
+    }
+    &-700{
+        font-weight: 700 !important;
+    }
+    &-800{
+        font-weight: 800 !important;
+    }
+    &-900{
+        font-weight: 900 !important;
+    }
     //size
     &-base{
         @include base-fs;
@@ -124,5 +136,11 @@ span{
     }
     &-xs{
         @include xs-fs;
+    }
+    &-md{
+        @include medium-fs;
+    }
+    &-lg{
+        @include large-fs;
     }
 }

@@ -8,11 +8,11 @@ declare var $: any;
 
 export class UIFunctions {
 
-   
+
     initFeather() {
         Feather.replace();
     }
-    isDark:Boolean = false;
+    isDark: Boolean = false;
     //close the mobile menu list when a option is clicked
     toggleMobileMenu = function (el: any) {
         $(el).closest("ul").toggleClass("open");
@@ -67,27 +67,27 @@ export class UIFunctions {
         anchor.closest("ul").removeClass("open");
     }
 
-    toggleMobileSearch(){
+    toggleMobileSearch() {
         $('.header-search-wrapper').toggleClass("open");
     }
 
-    toggleTheme(){
+    toggleTheme() {
         document.documentElement.classList.add('color-theme-in-transition')
-        if(this.isDark){
-            document.documentElement.setAttribute('data-theme','dark');
+        if (this.isDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
         }
-        else{
-            document.documentElement.setAttribute('data-theme','light');
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
         }
-        window.setTimeout(function() {
-          document.documentElement.classList.remove('color-theme-in-transition')
+        window.setTimeout(function () {
+            document.documentElement.classList.remove('color-theme-in-transition')
         }, 1000)
-      }
+    }
 
-      owlNext(item:any) {
+    owlNext(item: any) {
         item.next([200]);
-      }
-      owlPrev(item:any) {
+    }
+    owlPrev(item: any) {
         item.previous([200]);
-      }
+    }
 }

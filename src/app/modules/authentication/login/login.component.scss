@@ -1,4 +1,5 @@
-@import 'var';
+@import 'abstracts/mixins';
+@import 'abstracts/mixins-other';
 
 .content-wrapper{
     @include gradient-genrator(var(--gr-start), var(--gr-end), bottom left)

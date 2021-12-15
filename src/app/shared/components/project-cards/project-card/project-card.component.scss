@@ -1,4 +1,6 @@
-@import 'var';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/mixins-font';
 @import 'components/project-card';
 
 .project{
@@ -26,5 +28,4 @@
         flex-direction: column;
         min-height: 25rem;
     }
-   
 }

@@ -1,0 +1,71 @@
+@mixin large-fs { //appx 20px - 18px
+    font-size: 2rem;
+
+    @include res(md){
+        font-size: 2.22rem;
+    }
+    @include res(sm){
+        font-size: 2.1rem;
+    }
+    @include res(xxs){
+        font-size: 2.57rem;
+}   
+}
+
+@mixin medium-fs { //appx 18px - 16px
+    font-size: 1.8rem;
+
+    @include res(md){
+        font-size: 2rem;
+    }
+    @include res(sm){
+        font-size: 2.12rem;
+    }
+    @include res(xxs){
+        font-size: 2.28rem;
+}   
+}
+
+@mixin base-fs { //appx 16px - 14px
+    font-size: 1.6rem;
+
+    @include res(md){
+        font-size: 1.7rem;
+    }
+    @include res(sm){
+        font-size: 1.87rem;
+    }
+    @include res(xxs){
+        font-size: 2rem;
+}   
+}
+
+@mixin small-fs { //appx 14px - 12px
+    font-size: 1.4rem; //14
+
+    @include res(md){
+        font-size: 1.55rem; //14
+    }
+    @include res(sm){
+        font-size: 1.62rem; //13
+    }
+    @include res(xxs){
+        font-size: 1.85rem; //13
+}   
+}
+
+@mixin xs-fs { //appx 12px - 10px
+    font-size: 1.25rem; //12.5
+
+    @include res(md){
+        font-size: 1.33rem; //12
+    }
+
+    @include res(sm){
+        font-size: 1.37rem; //11
+    }
+
+    @include res(xxs){
+        font-size: 1.5rem; //11
+    }
+}

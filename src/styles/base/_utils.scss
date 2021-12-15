@@ -11,6 +11,13 @@
     background-color: var(--theme-gray-100);
 }
 
+.hr{
+    &-gray{
+        color: var(--theme-bg-secondary);
+    }
+}
+
+
 .font-600{
     font-weight: 600 !important;
 }
@@ -36,4 +43,11 @@
 .required{
     font-size: 2rem;
     font-weight: 600;
+}
+
+.sp-2{
+    padding:1.5rem 0;
+}
+.h-sp-md{
+    margin-bottom: 1.4rem;
 }

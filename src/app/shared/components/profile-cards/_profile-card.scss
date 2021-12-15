@@ -1,4 +1,5 @@
-@import 'var';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 .profile{
     &-card{
@@ -11,6 +12,5 @@
         border: 2px solid var(--theme-color-primary);
         box-shadow: $shadow-light-xl;
     }
-
 
 }

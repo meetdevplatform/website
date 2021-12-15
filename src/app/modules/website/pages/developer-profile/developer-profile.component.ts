@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Interests } from 'src/app/shared/data/interests';
+import { UIFunctions } from 'src/app/shared/functions/ui-functions';
 
 @Component({
   selector: 'app-developer-profile',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeveloperProfileComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public ui:UIFunctions,public mockInterests:Interests) { }
+  interests:any[] = [];
   ngOnInit(): void {
+    this.ui.initFeather();
+    this.interests = this.mockInterests.data.splice(0,6);
   }
 
 }

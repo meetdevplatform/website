@@ -64,9 +64,12 @@
 @import "abstracts/variables";
 @import "abstracts/mixins-core";
 @import "abstracts/mixins";
+@import "abstracts/mixins-other";
+@import "abstracts/mixins-font";
 @import "abstracts/theme";
 //nice select scss
 @import 'nice-select/scss/nice-select.scss';
+
 //basic
 @import "normalize.css";
 @import "base/animation";
@@ -79,6 +82,7 @@
 @import "components/card";
 @import "components/img";
 @import "components/forms";
+@import "components/ng-select";
 @import "components/owl";
 @import "components/dropdown";
 //layout

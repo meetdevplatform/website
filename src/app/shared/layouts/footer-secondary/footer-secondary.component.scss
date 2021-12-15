@@ -1,4 +1,4 @@
-@import 'var';
+@import 'abstracts/mixins';
 
 ul li {
     @include flex-center;

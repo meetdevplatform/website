@@ -1,14 +1,20 @@
 html{
     --theme-label-color:#{$color-secondary};
     --theme-input-color:#{$color-secondary};
-    --theme-input-secondary-bg:#{$white};
+   
 }
+
 [data-theme="dark"]{
     --theme-label-color:#{$color-primary-light};
     --theme-input-color:#{$white};
-    --theme-input-secondary-bg:#{$gray-bg-dark};
+   
 }
 
+input,select,textarea{
+    outline: none !important;
+    border: none;
+    background-color: var(--theme-input-secondary-bg);
+}
 
 select{
     display: none;
@@ -56,12 +62,6 @@ select{
         font-family: Met;
         align-items: center;
     }
-
-    // &-dark{
-    //     input,textarea,select{
-    //        background-color: var( --theme-input-secondary-bg); 
-    //     }
-    // }
 }
 
 .required{

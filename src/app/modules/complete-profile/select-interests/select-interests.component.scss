@@ -1,5 +1,7 @@
-@import 'var';
+@import 'abstracts/variables';
 @import 'components/banners';
+@import 'abstracts/mixins';
+@import 'abstracts/mixins-other';
 
 .card-interest{
     width: 100%;

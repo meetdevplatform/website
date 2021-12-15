@@ -3,9 +3,17 @@
     align-items: center;
     justify-content: center;
 }
-@mixin btn-shadow($color,$opacity) {
-    box-shadow: 0 0.5rem 2rem 0 rgba($color,$opacity)
+@mixin circle($size) {
+    min-height: $size;height: $size;
+    min-width: $size;width:$size;
 }
+
+@mixin rtl {
+    @at-root [dir="rtl"] #{&} {
+        @content
+    }
+}
+
 //MEDIA QUERY MANAGER - (takes the size of the screen and return the media query code)
 @mixin res($break-point){
     // -- >1200px normal css will apply 
@@ -39,77 +47,5 @@
         };
     }
 }
-// background:linear-gradient($angle deg, $color1 5.55%, #FFFFFF 91.62%)
-@mixin gradient-genrator($color-1,$color-2,$angle){
-    background:linear-gradient(to $angle, $color-1, $color-2);
-}
-
-@mixin theme-css($themes...){
-@each $theme in $themes {
-      @content($theme);
-  }
-}
 
 
-@mixin circle($size) {
-    min-height: $size;height: $size;
-    min-width: $size;width:$size;
-}
-
-@mixin medium-fs { //appx 18px - 16px
-    font-size: 1.8rem;
-
-    @include res(md){
-        font-size: 2rem;
-    }
-    @include res(sm){
-        font-size: 2.12rem;
-    }
-    @include res(xxs){
-        font-size: 2.28rem;
-}   
-}
-
-
-@mixin large-fs { //appx 20px - 18px
-    font-size: 2rem;
-
-    @include res(md){
-        font-size: 2.22rem;
-    }
-    @include res(sm){
-        font-size: 2.1rem;
-    }
-    @include res(xxs){
-        font-size: 2.57rem;
-}   
-}
-@mixin small-fs { //appx 14px - 12px
-    font-size: 1.4rem; //14
-
-    @include res(md){
-        font-size: 1.55rem; //14
-    }
-    @include res(sm){
-        font-size: 1.62rem; //13
-    }
-    @include res(xxs){
-        font-size: 1.85rem; //13
-}   
-}
-
-@mixin xs-fs { //appx 12px - 10px
-    font-size: 1.25rem; //12.5
-
-    @include res(md){
-        font-size: 1.33rem; //12
-    }
-
-    @include res(sm){
-        font-size: 1.37rem; //11
-    }
-
-    @include res(xxs){
-        font-size: 1.5rem; //11
-    }
-}

@@ -34,11 +34,7 @@ button{
     outline: none;
     cursor: pointer;
 }
-input,select,textarea{
-    outline: none !important;
-    border: none;
-    background-color: var(--theme-bg-intermediate);
-}
+
 body{
     box-sizing: border-box;
     overflow-x: hidden;

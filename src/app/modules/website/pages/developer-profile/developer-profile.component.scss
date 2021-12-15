@@ -1,0 +1,35 @@
+@import "var";
+@import "components/tabs";
+
+.profile-card{
+    padding:0;
+    &-section{
+        padding: 5rem 3.5rem;
+
+        &:not(:last-child){
+            border-right: 1.5px solid var(--theme-gray-100);
+        }
+
+        &-1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+}
+.skills-section{
+    margin-top: 4rem;
+}
+
+.social-link{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+
+    &:not(:last-child){
+        margin-bottom: 2rem;
+    }
+}

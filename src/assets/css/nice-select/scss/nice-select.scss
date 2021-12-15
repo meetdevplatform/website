@@ -72,7 +72,7 @@ $arrow_color: $gray !default;
     .list {
       opacity: 1;
       pointer-events: auto;
-      transform: scale(1) translateY(0);
+      transform: scaleY(1) translateY(0);
     }
   }
   &.disabled {
@@ -127,7 +127,7 @@ $arrow_color: $gray !default;
     position: absolute;
     top: 100%; left: 0;
     transform-origin: 50% 0;
-    transform: scale(0);
+    transform: scaleY(0);
     transition: all .3s cubic-bezier(0.5, 0, 0, 1.25), opacity .2s ease-out;
     z-index: 9;
     max-height: 20rem;
