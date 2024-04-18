@@ -4,6 +4,7 @@
 @import 'components/project-card';
 
 .project{
+
     &-view{
         width: 100%;
         text-align: center;
@@ -12,6 +13,10 @@
         display: block;
         font-weight: 600;
         @include large-fs;
+
+        &:hover{
+            color: $white;
+        }
     }
     &-img{
         height: 20rem;
@@ -26,6 +31,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        min-height: 25rem;
+        //height: 25rem;
     }
 }

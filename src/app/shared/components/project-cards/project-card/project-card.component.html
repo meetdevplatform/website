@@ -43,32 +43,35 @@
     </div>
 
     <div class="project-content">
-        <div class="project-content-top">
-            <div class="d-flex mb-2">
-                <a routerLink="/" class="flex-grow-1">
-                    <h4>
-                        {{project.title}}
-                    </h4>
-
-                    <p class="project-tagline">
-                        {{project.tag_line}}
-                    </p>
-                </a>
+        <div>
+            <div class="project-content-top">
+                <div class="d-flex mb-2">
+                    <a routerLink="/" class="flex-grow-1">
+                        <h4>
+                            {{project.title}}
+                        </h4>
+    
+                        <p class="project-tagline">
+                            {{project.tag_line}}
+                        </p>
+                    </a>
+                   
+                    <button class="btn-solo project-save flex-grow-1" title="Save Project">
+                        <i data-feather="bookmark"></i>
+                    </button>
+                    
+                </div>
+        
                
-                <button class="btn-solo project-save flex-grow-1" title="Save Project">
-                    <i data-feather="bookmark"></i>
-                </button>
-                
             </div>
-    
-           
+        
+                <div class="project-tags-box">
+                    <a routerLink="tags/category" class="project-tag text-xs" *ngFor="let tag of project.tags">
+                        {{tag}}
+                    </a>
+                </div>
         </div>
-    
-            <div class="project-tags-box">
-                <a routerLink="tags/category" class="project-tag text-xs" *ngFor="let tag of project.tags">
-                    {{tag}}
-                </a>
-            </div>
+       
         
       
 

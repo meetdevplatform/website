@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 
 export class HelperFunctions {
 
-getYearList(numberOfYears:number,startYear:number = 0,future = true){
+ getYearList(numberOfYears:number,startYear:number = 0,future = true){
 
     let yearList:number[] = [];
     let year;
@@ -28,4 +28,9 @@ getYearList(numberOfYears:number,startYear:number = 0,future = true){
 return yearList;
     
 }
+
+static repeatElements(count:number,el:any){
+    return Array(count).fill(el);
+}
+
 }

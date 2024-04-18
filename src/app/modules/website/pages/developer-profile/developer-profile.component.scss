@@ -33,3 +33,38 @@
         margin-bottom: 2rem;
     }
 }
+
+//switch container styles
+.switch{
+    &-container{
+        position: relative;
+    }
+
+    &-menu{
+        border-bottom: 0.8px solid var(--theme-gray-100);
+        display: flex;
+
+        &-item{
+            text-align: center;
+            padding: 1.8rem 4rem;
+            cursor: pointer;
+            transition: $transition-quick;
+            border-top-left-radius: 0.8rem;
+            border-top-right-radius: 0.8rem;
+
+            & > *:first-child {
+                color: var(--theme-gray-text);
+            }
+            &:hover{
+                background-color: var(--theme-gray-100);
+            }
+            &.active{
+                box-shadow: $shadow-sm;
+                background-color: var(--theme-bg);
+                & > *:first-child {
+                    color: var(--theme-text);
+                }
+            }
+        }
+    }
+}
