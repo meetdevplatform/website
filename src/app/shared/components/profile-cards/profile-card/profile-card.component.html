@@ -15,11 +15,9 @@
         <h5 class="mb-1 mt-2">{{profile.full_name}}</h5>
 
         <p class="text-sm mb-2">
-            <span *ngIf="profile.is_college_student">
-                Student
-            </span>
-            <span *ngIf="!profile.is_college_student">
-                Working Professional
+            <span>
+                {{profile.is_college_student ? "Student":"Working Professional"}}
+                
             </span>
             , <span class="text-tertiary font-700">45 DevCoins</span>
         </p>
