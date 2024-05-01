@@ -25,7 +25,7 @@ export class WebsiteComponent implements OnInit {
   checkForHeader() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event['url'] == '/login' || event['url'] == '/signup') this.showSecondary = true;
+        if (event['url'] == '/' || event['url'] == '/signup') this.showSecondary = true;
         else this.showSecondary = false;
       }
     });
