@@ -9,7 +9,7 @@ const routes: Routes = [
     component:WebsiteComponent,
     children:[
       {
-        path:'',
+        path:'home',
         component:HomeComponent,
       },
       {
@@ -17,7 +17,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/developer-profile/developer-profile.module').then(m => m.DeveloperProfileModule)
       },
       {
-        path:'login',
+        path:'',
         loadChildren: () => import('../../modules/authentication/login/login.module').then(m => m.LoginModule)
       },
       {

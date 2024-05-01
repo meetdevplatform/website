@@ -39,7 +39,7 @@ export class SelectInterestsComponent implements OnInit {
       setTimeout(()=>{
         this.loading = false;
         this.submitted = false;
-        this.router.navigate(['/'])
+        this.router.navigate(['/home'])
       }, 1500)
     }
     
