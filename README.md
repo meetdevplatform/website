@@ -4,4 +4,4 @@
 
 **Note: The project is still in progress**
 
-Link - #[https://meetdevplatform.netlify.app/]
+Link - **https://meetdevplatform.netlify.app/**
